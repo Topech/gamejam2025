@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://djogu8q3gy10g"]
+
+[ext_resource type="Script" path="res://round.gd" id="1_5trwk"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2hx6v"]
+
+[node name="Round" type="Node"]
+script = ExtResource("1_5trwk")
+
+[node name="Bubble" type="Node2D" parent="."]
+position = Vector2(560, 316)
+scale = Vector2(100, 100)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bubble"]
+modulate = Color(0.851765, 0.191647, 0.498869, 1)
+texture = SubResource("CanvasTexture_2hx6v")
