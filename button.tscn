@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://button.gd" id="1_6syls"]
 [ext_resource type="Script" path="res://start_button.gd" id="2_d5gbx"]
+[ext_resource type="Texture2D" uid="uid://bciy3tvnlmt4" path="res://Assets/Buttons/Unmute_Large.png" id="2_wd6n5"]
+[ext_resource type="Texture2D" uid="uid://dqc7ey2a8n8dm" path="res://Assets/Buttons/Mute_Large.png" id="3_jg8vh"]
 [ext_resource type="Texture2D" uid="uid://degcmku0mhc20" path="res://Assets/Buttons/MainMenu/Play_2.png" id="3_mvdgq"]
-[ext_resource type="Texture2D" uid="uid://c6y3anolcs8vl" path="res://Assets/Buttons/Mute.png" id="4_h44qx"]
-[ext_resource type="Texture2D" uid="uid://dm1n7peunmaje" path="res://Assets/Buttons/Unmute.png" id="5_ojvjv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx3b4"]
 
@@ -39,13 +39,13 @@ script = ExtResource("1_6syls")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 1216.0
-offset_top = 19.0
-offset_right = 1262.0
-offset_bottom = 59.0
+offset_left = 1128.0
+offset_top = 24.0
+offset_right = 1256.0
+offset_bottom = 152.0
 toggle_mode = true
-texture_normal = ExtResource("4_h44qx")
-texture_pressed = ExtResource("5_ojvjv")
+texture_normal = ExtResource("2_wd6n5")
+texture_pressed = ExtResource("3_jg8vh")
 stretch_mode = 4
 
 [node name="Menu" type="VBoxContainer" parent="."]
