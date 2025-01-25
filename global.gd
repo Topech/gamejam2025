@@ -3,6 +3,8 @@ extends Node
 @export var player_money: int = 0  # Initialize with starting amount
 @export var round_metrics: MetricStruct = null
 
+
+
 func add_money(amount: int) -> void:
 	player_money += amount
 

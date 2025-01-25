@@ -8,6 +8,7 @@ extends Node
 
 @onready var growth_time_elapsed: float = 0
 @onready var all_growth: float = 0
+@onready var random_growth_manager = $BubbleBlower.get_random_grower(0.8)
 
 
 signal popped
@@ -72,8 +73,9 @@ func _process(delta: float) -> void:
 
 		#var growth_percent = $BubbleBlower.linear_growth(growth_time_elapsed)
 		#var growth_percent = $BubbleBlower.expo_growth(growth_time_elapsed)
-		var growth_percent = $BubbleBlower.hybrid_linear_expo_growth(growth_time_elapsed)
-
+		#var growth_percent = $BubbleBlower.hybrid_linear_expo_growth(growth_time_elapsed)
+		var growth_percent = random_growth_manager.random_growth(growth_time_elapsed)
+		
 		all_growth = growth_percent * max_growth
 		$Bubble.grow(all_growth)
 
