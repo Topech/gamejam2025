@@ -7,7 +7,7 @@ extends Node
 @onready var bubble_node: Node2D = $Bubble
 @onready var is_growing: bool = false
 @onready var initial_bubble_scale = Vector2(0, 0)
-@onready var max_bubble_scale: float = 500
+@onready var max_bubble_scale: float = 8
 
 @onready var growth_time_elapsed: float = 0
 @onready var all_growth: float = 0

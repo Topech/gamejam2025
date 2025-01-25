@@ -1,6 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://djogu8q3gy10g"]
 
 [ext_resource type="Script" path="res://round.gd" id="1_5trwk"]
+[ext_resource type="Texture2D" uid="uid://bfcada58qgo04" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
 
 [sub_resource type="GDScript" id="GDScript_wey7r"]
 script/source = "extends Node2D
@@ -35,8 +36,6 @@ func grow(growth: float):
 	
 "
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_2hx6v"]
-
 [sub_resource type="GDScript" id="GDScript_nhb06"]
 script/source = "extends ProgressBar
 "
@@ -54,7 +53,7 @@ script = SubResource("GDScript_wey7r")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bubble"]
 modulate = Color(0.851765, 0.191647, 0.498869, 1)
-texture = SubResource("CanvasTexture_2hx6v")
+texture = ExtResource("2_yca1n")
 
 [node name="BlowButton" type="Button" parent="."]
 offset_left = 505.0
