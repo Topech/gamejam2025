@@ -99,5 +99,8 @@ func _on_stop_button_pressed() -> void:
 	is_growing = false
 	$StopButton.disabled = true
 	var metrics = MetricStruct.new(growth_time_elapsed, all_growth)
+	Global.round_metrics = metrics
 	emit_signal("stopped", metrics)
+	get_tree().change_scene_to_file("res://round_scoreboard.tscn")
+
 	

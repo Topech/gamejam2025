@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://otsn0t6n3dkd"]
+
+[ext_resource type="Script" path="res://round_scoreboard.gd" id="1_02xr5"]
+
+[node name="RoundScoreboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_02xr5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 183.0
+offset_right = 994.0
+offset_bottom = 538.0
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 596.0
+offset_right = 640.0
+offset_bottom = 627.0
+text = "To Upgrades"
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
