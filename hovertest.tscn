@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://becd4ior045ab"]
+
+[ext_resource type="PackedScene" uid="uid://c6a6sgpnvrubx" path="res://button.tscn" id="1_qoq1w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_al15b"]
+size = Vector2(102, 33)
+
+[node name="Hovertest" type="Node2D"]
+
+[node name="Control" parent="." instance=ExtResource("1_qoq1w")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 131.0
+offset_top = 297.0
+offset_right = 131.0
+offset_bottom = 297.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Area2D" type="Area2D" parent="Control"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Area2D"]
+position = Vector2(76, -113.5)
+shape = SubResource("RectangleShape2D_al15b")
+
+[node name="StartButtonTooltip" type="RichTextLabel" parent="Control/Area2D"]
+offset_left = 113.0
+offset_top = -175.0
+offset_right = 266.0
+offset_bottom = -119.0
+text = "This button starts the game!"
+
+[connection signal="mouse_entered" from="Control/Area2D" to="Control" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Area2D" to="Control" method="_on_area_2d_mouse_exited"]
