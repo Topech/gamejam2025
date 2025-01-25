@@ -27,13 +27,35 @@ func hybrid_linear_expo_growth(seconds: float) -> float:
 
 
 
-#class RandomGrowthManager:
-	#var current_growth: float
-	#
-	#func _init():
-		#self.current_growth = 0
-	#
-#
-	#func random_growth() -> float:
-		#current_growth += 0.4 * randf()
-		#return min(1, current_growth)
+class RandomGrowthManager:
+	var current_growth: float
+	var variation_limit: float
+	var variation: float
+	var next_variation_time_limit: float
+	var last_time_elapsed: float
+	
+	func _init(_variation_limit: float):
+		current_growth = 0
+		last_time_elapsed = 0
+		variation_limit = _variation_limit
+		reroll_variation()
+	
+	func reroll_variation():
+		variation = variation_limit * randf()
+		next_variation_time_limit = last_time_elapsed + min(1, (1 * randf()))
+
+
+	func random_growth(time_elapsed: float) -> float:
+		if time_elapsed >= next_variation_time_limit:
+			reroll_variation()
+		var delta = time_elapsed - last_time_elapsed
+		current_growth += variation * delta
+		last_time_elapsed = time_elapsed
+		return min(1, current_growth)
+		
+		
+func get_random_grower(variation: float):
+	"""mildly cursed"""
+	var random_manager = RandomGrowthManager.new(variation)
+	return random_manager
+	
