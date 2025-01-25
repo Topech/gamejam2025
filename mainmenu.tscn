@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://mainmenu.gd" id="1_6syls"]
 [ext_resource type="Shader" path="res://scroll.gdshader" id="2_27xmd"]
 [ext_resource type="Script" path="res://start_button.gd" id="2_d5gbx"]
-[ext_resource type="Texture2D" uid="uid://cqu3gb3f1w7w8" path="res://Assets/Buttons/Unmute_Medium.png" id="2_h262g"]
+[ext_resource type="Texture2D" uid="uid://dpnxnt6ot7h82" path="res://Assets/Buttons/Unmute_Medium.png" id="2_h262g"]
 [ext_resource type="Shader" path="res://wavy.gdshader" id="2_vg038"]
-[ext_resource type="Texture2D" uid="uid://ddjvdtpso71d" path="res://Assets/Buttons/Mute_Medium.png" id="3_g1nhb"]
-[ext_resource type="Texture2D" uid="uid://sbaam1ogf2yy" path="res://Assets/Backgrounds/MainMenu_8_Large_Transparent.png" id="3_qm8sf"]
-[ext_resource type="Texture2D" uid="uid://bomp54ju0icvf" path="res://Assets/Buttons/MainMenu/Play_4.png" id="7_j7gx1"]
+[ext_resource type="Texture2D" uid="uid://bkun3tv1dqv4u" path="res://Assets/Buttons/Mute_Medium.png" id="3_g1nhb"]
+[ext_resource type="Texture2D" uid="uid://bppltwhpntnhn" path="res://Assets/Backgrounds/MainMenu_8_Large_Transparent.png" id="3_qm8sf"]
+[ext_resource type="Texture2D" uid="uid://bgs37j5l3q0gv" path="res://Assets/Buttons/MainMenu/Play_4.png" id="7_j7gx1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d7nwu"]
 shader = ExtResource("2_27xmd")
@@ -77,7 +77,7 @@ grow_vertical = 2
 texture = ExtResource("3_qm8sf")
 stretch_mode = 1
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="AudioToggle" type="TextureButton" parent="."]
 layout_mode = 2
 offset_left = 1114.0
 offset_top = 23.0
@@ -131,6 +131,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("7_j7gx1")
 stretch_mode = 2
 
+[connection signal="pressed" from="AudioToggle" to="." method="_on_audio_toggle_pressed"]
 [connection signal="mouse_entered" from="Menu/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="mouse_exited" from="Menu/StartButton" to="." method="_on_start_button_mouse_exited"]
 [connection signal="pressed" from="Menu/StartButton" to="." method="_on_start_button_pressed"]
