@@ -62,16 +62,16 @@ script = ExtResource("6_52slm")
 position = Vector2(0, 30.5)
 
 [node name="BlowButton" type="Button" parent="."]
-offset_left = 505.0
-offset_top = 536.0
-offset_right = 551.0
-offset_bottom = 567.0
+offset_left = 538.0
+offset_top = 537.0
+offset_right = 584.0
+offset_bottom = 568.0
 text = "Blow"
 
 [node name="StopButton" type="Button" parent="."]
-offset_left = 576.0
+offset_left = 539.0
 offset_top = 537.0
-offset_right = 622.0
+offset_right = 585.0
 offset_bottom = 568.0
 text = "Stop"
 
