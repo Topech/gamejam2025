@@ -2,7 +2,7 @@ extends Button
 
 var speed = 0.025
 var n = 0
-var dist_threshold = 20
+var dist_threshold = 25
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

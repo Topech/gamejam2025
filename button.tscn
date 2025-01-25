@@ -1,10 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://co0pj5hmm602x"]
+[gd_scene load_steps=20 format=3 uid="uid://cmu6w3n534n5l"]
 
-[ext_resource type="Script" path="res://mainmenu.gd" id="1_6syls"]
+[ext_resource type="Script" path="res://button.gd" id="1_6syls"]
 [ext_resource type="Shader" path="res://scroll.gdshader" id="2_27xmd"]
 [ext_resource type="Script" path="res://start_button.gd" id="2_d5gbx"]
 [ext_resource type="Texture2D" uid="uid://cqu3gb3f1w7w8" path="res://Assets/Buttons/Unmute_Medium.png" id="2_h262g"]
-[ext_resource type="Shader" path="res://wavy.gdshader" id="2_vg038"]
 [ext_resource type="Texture2D" uid="uid://ddjvdtpso71d" path="res://Assets/Buttons/Mute_Medium.png" id="3_g1nhb"]
 [ext_resource type="Texture2D" uid="uid://sbaam1ogf2yy" path="res://Assets/Backgrounds/MainMenu_8_Large_Transparent.png" id="3_qm8sf"]
 [ext_resource type="Texture2D" uid="uid://bomp54ju0icvf" path="res://Assets/Buttons/MainMenu/Play_4.png" id="7_j7gx1"]
@@ -33,21 +32,6 @@ shader = ExtResource("2_27xmd")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_je12f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_drlsf"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5g0df"]
-shader = ExtResource("2_vg038")
-shader_parameter/waveAmplitude = 0.05
-shader_parameter/correctVertex = false
-shader_parameter/waveFrequency = 10.0
-shader_parameter/verticalWave = true
-shader_parameter/keepTransparency = true
-shader_parameter/useTime = true
-shader_parameter/waveSpeed = 1.0
-shader_parameter/progress = 0.0
-shader_parameter/firstHalf = 0.5
-shader_parameter/secondHalf = 0.5
-shader_parameter/freezeFirstHalf = false
-shader_parameter/freezeSecondHalf = false
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -89,17 +73,18 @@ texture_pressed = ExtResource("3_g1nhb")
 stretch_mode = 4
 
 [node name="Menu" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 520.0
-offset_top = 600.0
-offset_right = 520.0
-offset_bottom = 600.0
-scale = Vector2(1, 1.00415)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 500.0
+offset_top = -489.0
+offset_right = 624.0
+offset_bottom = -431.0
+grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="Menu"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nx3b4")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_4jxcf")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_24le5")
@@ -114,7 +99,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_drlsf")
 script = ExtResource("2_d5gbx")
 
 [node name="StartButtonTooltip" type="RichTextLabel" parent="Menu/StartButton"]
-visible = false
 layout_mode = 2
 offset_left = 241.0
 offset_top = -33.0
@@ -123,11 +107,11 @@ offset_bottom = 22.0
 text = "This button starts the game!"
 
 [node name="TextureRect" type="TextureRect" parent="Menu/StartButton"]
-material = SubResource("ShaderMaterial_5g0df")
 layout_mode = 0
-offset_right = 120.0
-offset_bottom = 56.0
-scale = Vector2(2, 2)
+offset_left = -2.0
+offset_top = 9.0
+offset_right = 118.0
+offset_bottom = 65.0
 texture = ExtResource("7_j7gx1")
 stretch_mode = 2
 
