@@ -52,6 +52,9 @@ func _ready() -> void:
 	$Bubble.max_growth = max_growth
 	
 	$StopButton.disabled = true
+	$BlowButton.visible = true
+	$StopButton.visible = false
+	
 	$Bubble/BubblePopSprite.stop()
 	$Bubble/BubblePopSprite.frame = 0
 	
@@ -92,6 +95,8 @@ func _on_blow_button_pressed() -> void:
 	is_growing = true
 	$BlowButton.disabled = true
 	$StopButton.disabled = false
+	$BlowButton.visible = false
+	$StopButton.visible = true
 
 
 
