@@ -91,6 +91,9 @@ func pop():
 	$Bubble/BubblePopSprite.play_pop()
 	is_growing = false
 	emit_signal("popped")
+	get_tree().change_scene_to_file("res://gameover.tscn")
+
+	
 
 
 
