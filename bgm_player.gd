@@ -20,11 +20,12 @@ func crossfade(audio_stream: AudioStream) -> void:
 		return
 	
 	# If track1 is playing fade to track2, etc
+	# Somehow the track names ended up backwards, but they work like this.
 	if track_2.playing:
 		track_1.stream = audio_stream
 		track_1.play()
-		anim_player.play("FadeToTrack1")
+		anim_player.play("FadeToTrack2")
 	else:
 		track_2.stream = audio_stream
 		track_2.play()
-		anim_player.play("FadeToTrack2")
+		anim_player.play("FadeToTrack1")

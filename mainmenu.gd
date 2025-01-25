@@ -4,6 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Menu/StartButton/StartButtonTooltip.visible = false
+	BgmPlayer.crossfade(load("res://Assets/Music/GGJ2025Bubble-Won'tPop.ogg"))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

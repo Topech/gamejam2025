@@ -60,6 +60,7 @@ func _ready() -> void:
 	
 	$BubbleGrowthProgressBar.max_value = max_growth
 	
+	BgmPlayer.crossfade(load("res://Assets/Music/GGJ2025Bubble-Don'tPop.ogg"))
 
 	
 
