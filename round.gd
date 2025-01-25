@@ -1,14 +1,10 @@
 extends Node
 
 
-## How much the bubble grows per second. Max is 100
-@export var bubble_growth_rate: float = 20
 @export var max_growth: float = 100
 
 @onready var bubble_node: Node2D = $Bubble
 @onready var is_growing: bool = false
-@onready var initial_bubble_scale = Vector2(0, 0)
-@onready var max_bubble_scale: float = 8
 
 @onready var growth_time_elapsed: float = 0
 @onready var all_growth: float = 0
@@ -52,14 +48,14 @@ signal stopped
 
 
 
-func _ready() -> void:
-	bubble_node.set_scale(initial_bubble_scale)
-	
+func _ready() -> void:	
 	$Bubble.max_growth = max_growth
 	
 	$StopButton.disabled = true
 	$Bubble/BubblePopSprite.stop()
 	$Bubble/BubblePopSprite.frame = 0
+	
+	$BubbleGrowthProgressBar.max_value = max_growth
 	
 
 	
@@ -70,17 +66,13 @@ func _process(delta: float) -> void:
 	if is_growing:
 		growth_time_elapsed += delta
 
-		var growth = bubble_growth_rate * delta
-		all_growth += growth
-		
+		#var growth_percent = $BubbleBlower.linear_growth(growth_time_elapsed)
+		#var growth_percent = $BubbleBlower.expo_growth(growth_time_elapsed)
+		var growth_percent = $BubbleBlower.hybrid_linear_expo_growth(growth_time_elapsed)
+
+		all_growth = growth_percent * max_growth
 		$Bubble.grow(all_growth)
-		
-		#var scale_inc = calc_scale_for_growth(growth)
-		#var new_scale = min(max_bubble_scale, bubble_node.scale.x + scale_inc)
-		#var new_scale_vec = Vector2(new_scale, new_scale)
-#
-		#bubble_node.set_scale(new_scale_vec)
-		
+
 		if all_growth >= max_growth:
 			pop()
 	
@@ -89,11 +81,10 @@ func _process(delta: float) -> void:
 
 
 func pop():
+	$StopButton.disabled = true
 	$Bubble/BubblePopSprite.play_pop()
 	is_growing = false
 	emit_signal("popped")
-
-
 
 
 
@@ -110,10 +101,3 @@ func _on_stop_button_pressed() -> void:
 	var metrics = MetricStruct.new(growth_time_elapsed, all_growth)
 	emit_signal("stopped", metrics)
 	
-
-#
-#
-#func calc_scale_for_growth(growth: float) -> float:
-	#""" growth is 0-100, scale is dependant """
-	#var growth_ratio = growth / 100
-	#return (growth_ratio * max_bubble_scale)
