@@ -21,5 +21,4 @@ func calc_money(metrics):
 
 
 func _on_next_button_pressed() -> void:
-	# get_tree().change_scene_to_file("res://upgrades.tscn")
-	pass
+	get_tree().change_scene_to_file("res://upgrade_screen.tscn")
