@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://djogu8q3gy10g"]
+
+[ext_resource type="Script" path="res://round.gd" id="1_5trwk"]
+
+[sub_resource type="GDScript" id="GDScript_wey7r"]
+script/source = "extends Node2D
+
+## How much the bubble grows per second. Max is 100
+@export var growth_rate: float = 20
+
+@export var initial_bubble_scale: float = 0
+
+@export var max_bubble_scale: float = 500
+
+var accumulated_growth: float
+
+
+
+func _ready() -> void:
+	accumulated_growth = 0
+	var scale_vec = Vector2(initial_bubble_scale, initial_bubble_scale)
+	set_scale(scale_vec)
+
+
+
+func calc_scale_for_growth(growth: float) -> float:
+	\"\"\" growth is 0-100, scale is dependant \"\"\"
+	var growth_ratio = growth / 100
+	return growth_ratio * max_bubble_scale
+
+
+func grow(growth: float):
+	min(max_bubble_scale, calc_scale_for_growth(growth))
+	
+	
+"
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2hx6v"]
+
+[sub_resource type="GDScript" id="GDScript_nhb06"]
+script/source = "extends ProgressBar
+"
+
+[node name="Round" type="Node"]
+script = ExtResource("1_5trwk")
+
+[node name="Metrics" type="Node" parent="."]
+
+[node name="BubbleBlower" type="Node" parent="."]
+
+[node name="Bubble" type="Node2D" parent="."]
+position = Vector2(560, 316)
+script = SubResource("GDScript_wey7r")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bubble"]
+modulate = Color(0.851765, 0.191647, 0.498869, 1)
+texture = SubResource("CanvasTexture_2hx6v")
+
+[node name="BlowButton" type="Button" parent="."]
+offset_left = 505.0
+offset_top = 536.0
+offset_right = 551.0
+offset_bottom = 567.0
+text = "Blow"
+
+[node name="StopButton" type="Button" parent="."]
+offset_left = 576.0
+offset_top = 537.0
+offset_right = 622.0
+offset_bottom = 568.0
+text = "Stop"
+
+[node name="BubbleGrowthProgressBar" type="ProgressBar" parent="."]
+offset_left = 347.0
+offset_top = 592.0
+offset_right = 797.0
+offset_bottom = 619.0
+show_percentage = false
+script = SubResource("GDScript_nhb06")
+
+[connection signal="pressed" from="BlowButton" to="." method="_on_blow_button_pressed"]
+[connection signal="pressed" from="StopButton" to="." method="_on_stop_button_pressed"]
