@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6a6sgpnvrubx"]
+[gd_scene load_steps=4 format=3 uid="uid://c6a6sgpnvrubx"]
 
 [ext_resource type="Script" path="res://button.gd" id="1_6syls"]
 [ext_resource type="Script" path="res://start_button.gd" id="2_d5gbx"]
+[ext_resource type="Texture2D" uid="uid://degcmku0mhc20" path="res://Assets/Buttons/MainMenu/Play_2.png" id="3_mvdgq"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -17,15 +18,15 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 27.0
-offset_top = -332.0
-offset_right = 257.0
-offset_bottom = -25.0
+offset_left = 507.0
+offset_top = -488.0
+offset_right = 737.0
+offset_bottom = -181.0
 grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="Menu"]
 layout_mode = 2
-text = "Start"
+text = " "
 script = ExtResource("2_d5gbx")
 
 [node name="StartButtonTooltip" type="RichTextLabel" parent="Menu/StartButton"]
@@ -36,15 +37,13 @@ offset_right = 429.0
 offset_bottom = 22.0
 text = "This button starts the game!"
 
-[node name="OptionsButton" type="Button" parent="Menu"]
-layout_mode = 2
-text = "Options"
-
-[node name="QuitButton" type="Button" parent="Menu"]
-layout_mode = 2
-text = "Quit"
+[node name="TextureRect" type="TextureRect" parent="Menu/StartButton"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 107.0
+offset_bottom = 30.0
+texture = ExtResource("3_mvdgq")
 
 [connection signal="mouse_entered" from="Menu/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="mouse_exited" from="Menu/StartButton" to="." method="_on_start_button_mouse_exited"]
 [connection signal="pressed" from="Menu/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="Menu/OptionsButton" to="." method="_on_options_button_pressed"]
