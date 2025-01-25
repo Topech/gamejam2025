@@ -19,6 +19,37 @@ signal stopped
 
 
 
+# round
+	# - inputs (player upgrades - bubble-blower options, modifier for when to pop)
+	# metrics
+		# - how fast bubble grew
+		# - how big bubble is
+	# bubble-blower
+		# - player upgrades
+		# calc next growth
+			# - linear
+			# - exponential
+			# - random
+			# [stretch goal] - 'blowing' sine-wave
+	# bubble
+		# - scales sprite to growth
+		# - translate to make look like growth from machine at bottom
+	# UI
+		# Blow btn
+		# Stop btn
+		# Progress bar
+		
+	# [stretch goals]
+	# background upgrades
+		# spawn extra bubbles to pop
+	
+	
+# score screen
+	# - inputs (metrics from round)
+	# calc-money
+
+
+
 
 func _ready() -> void:
 	bubble_node.set_scale(initial_bubble_scale)
@@ -59,7 +90,9 @@ func _on_blow_button_pressed() -> void:
 func _on_stop_button_pressed() -> void:
 	is_growing = false
 	$StopButton.disabled = true
-	emit_signal("stopped")
+	var metrics = MetricStruct.new(growth_time_elapsed, all_growth)
+	emit_signal("stopped", metrics)
+	
 
 
 

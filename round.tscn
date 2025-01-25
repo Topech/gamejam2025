@@ -44,6 +44,10 @@ script/source = "extends ProgressBar
 [node name="Round" type="Node"]
 script = ExtResource("1_5trwk")
 
+[node name="Metrics" type="Node" parent="."]
+
+[node name="BubbleBlower" type="Node" parent="."]
+
 [node name="Bubble" type="Node2D" parent="."]
 position = Vector2(560, 316)
 script = SubResource("GDScript_wey7r")
