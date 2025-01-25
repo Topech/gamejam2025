@@ -3,19 +3,13 @@
 [ext_resource type="Script" path="res://button.gd" id="1_6syls"]
 [ext_resource type="Shader" path="res://scroll.gdshader" id="2_27xmd"]
 [ext_resource type="Script" path="res://start_button.gd" id="2_d5gbx"]
-<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://o4is81kctjp6" path="res://Assets/Buttons/Unmute_Medium.png" id="2_h262g"]
 [ext_resource type="Texture2D" uid="uid://5iehey8ip3uc" path="res://Assets/Buttons/Mute_Medium.png" id="3_g1nhb"]
-[ext_resource type="Texture2D" uid="uid://degcmku0mhc20" path="res://Assets/Buttons/MainMenu/Play_2.png" id="3_mvdgq"]
-=======
-[ext_resource type="Texture2D" uid="uid://dvdwnhvo1c42t" path="res://Assets/Buttons/Unmute_Large.png" id="2_wd6n5"]
-[ext_resource type="Texture2D" uid="uid://dtjkgqumngc48" path="res://Assets/Buttons/Mute_Large.png" id="3_jg8vh"]
-[ext_resource type="Texture2D" uid="uid://sbaam1ogf2yy" path="res://Assets/Backgrounds/MainMenu_8_Large_Transparent.png" id="3_qm8sf"]
-[ext_resource type="Texture2D" uid="uid://bomp54ju0icvf" path="res://Assets/Buttons/MainMenu/Play_4.png" id="7_j7gx1"]
+[ext_resource type="Texture2D" uid="uid://1k1klg0mwhl4" path="res://Assets/Backgrounds/MainMenu_8_Large_Transparent.png" id="3_qm8sf"]
+[ext_resource type="Texture2D" uid="uid://58a0cuoxn65t" path="res://Assets/Buttons/MainMenu/Play_4.png" id="7_j7gx1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d7nwu"]
 shader = ExtResource("2_27xmd")
->>>>>>> Stashed changes
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx3b4"]
 
@@ -48,9 +42,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6syls")
 
-<<<<<<< Updated upstream
-[node name="MuteButton" type="TextureButton" parent="."]
-=======
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -71,7 +62,6 @@ texture = ExtResource("3_qm8sf")
 stretch_mode = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
->>>>>>> Stashed changes
 layout_mode = 2
 offset_left = 1114.0
 offset_top = 23.0
