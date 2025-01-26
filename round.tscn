@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://djogu8q3gy10g"]
+[gd_scene load_steps=33 format=3 uid="uid://djogu8q3gy10g"]
 
 [ext_resource type="Script" path="res://round.gd" id="1_5trwk"]
 [ext_resource type="Texture2D" uid="uid://5ehg7u644b45" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://t26stqgpmtiq" path="res://Assets/hehehehe.png" id="11_hr2cq"]
 [ext_resource type="Texture2D" uid="uid://b8wmk5mdccjlq" path="res://Assets/Buttons/Round/Blow/Blow_4.png" id="12_lk1jn"]
 [ext_resource type="Texture2D" uid="uid://ds5340dquc6qf" path="res://Assets/Buttons/Round/Blow/Blow_Shadow.png" id="13_dttws"]
+[ext_resource type="Texture2D" uid="uid://3ioynypoo7pm" path="res://Assets/Bubbles/bubble_scintillating2.png" id="13_y0lw5"]
 [ext_resource type="Texture2D" uid="uid://baoo6jgx8s10n" path="res://Assets/Buttons/Round/Stop/Stop_accented.png" id="14_6x8mc"]
 [ext_resource type="Texture2D" uid="uid://dmvbiqeywajwf" path="res://Assets/Buttons/Round/Stop/Stop_Pressed.png" id="15_be3ap"]
 [ext_resource type="Texture2D" uid="uid://icefu12kkj3" path="res://Assets/Buttons/disabled swamp icon.png" id="17_fqhun"]
@@ -41,6 +42,17 @@ script/source = "extends ProgressBar
 [sub_resource type="SpriteFrames" id="SpriteFrames_cdmdu"]
 resource_local_to_scene = true
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yca1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_y0lw5")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_yca1n")
@@ -143,7 +155,7 @@ texture = ExtResource("2_yca1n")
 [node name="BubblePopSprite" type="AnimatedSprite2D" parent="Bubble"]
 material = SubResource("ShaderMaterial_3yefv")
 sprite_frames = SubResource("SpriteFrames_cdmdu")
-animation = &"Pop"
+animation = &"Default"
 script = ExtResource("6_52slm")
 
 [node name="BubbleBottomMarker" type="Marker2D" parent="Bubble"]
