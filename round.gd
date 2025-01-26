@@ -112,7 +112,8 @@ func _on_stop_button_pressed() -> void:
 	var metrics = MetricStruct.new(growth_time_elapsed, all_growth)
 	Global.round_metrics = metrics
 	emit_signal("stopped", metrics)
-	BgmPlayer.play_song_wont_pop()
+	await get_tree().create_timer(1).timeout
+  BgmPlayer.play_song_wont_pop()
 	get_tree().change_scene_to_file("res://round_scoreboard.tscn")
 
 	

@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0f8qg5yvmev"]
+[gd_scene load_steps=3 format=3 uid="uid://d0f8qg5yvmev"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_10r6l"]
+[ext_resource type="PackedScene" uid="uid://grbkh4sg2pj6" path="res://CursorTrail.tscn" id="2_rcphj"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_10r6l")
+
+[node name="Node2D" parent="." instance=ExtResource("2_rcphj")]
