@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c4c5o5aqtvimi"]
+[gd_scene load_steps=35 format=3 uid="uid://c4c5o5aqtvimi"]
 
 [ext_resource type="Shader" path="res://BalloonPixelater.gdshader" id="1_i3fsf"]
 [ext_resource type="Script" path="res://upgrade_screen.gd" id="1_ypabj"]
@@ -6,14 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://bg458f36mgj8d" path="res://Assets/Backgrounds/Upgrades_Screen/UpgradesShopTexture_S.png" id="2_edweg"]
 [ext_resource type="Texture2D" uid="uid://ctogr64m6e0o1" path="res://Assets/Panels/Upgrades_Screen_Panel.png" id="3_r2jn1"]
 [ext_resource type="Shader" path="res://wavy.gdshader" id="3_ul5d8"]
-[ext_resource type="Texture2D" uid="uid://dv7uj2ytr1m5k" path="res://Assets/Bubbles/bubble2.png" id="3_v1f64"]
 [ext_resource type="Texture2D" uid="uid://bgx63d7gjdqbv" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple.png" id="5_2bhk6"]
 [ext_resource type="Texture2D" uid="uid://bjgqav02xyhil" path="res://Assets/Buttons/UpgradesScreen/Next_Day_Button.png" id="6_3xpb3"]
 [ext_resource type="Shader" path="res://Bouncer.gdshader" id="6_17v14"]
 [ext_resource type="Texture2D" uid="uid://bbtt60os1kmca" path="res://Assets/Buttons/UpgradesScreen/UpgradesScreenCounter.png" id="6_635tf"]
 [ext_resource type="Script" path="res://upgrade_soap_button.gd" id="6_ahvdy"]
 [ext_resource type="Texture2D" uid="uid://y3b0h8kra5ev" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple_Large.png" id="6_aropa"]
+[ext_resource type="Texture2D" uid="uid://bo5i22uxu4tqp" path="res://Assets/Buttons/UpgradesScreen/Buy_1.png" id="12_gks3l"]
 [ext_resource type="Texture2D" uid="uid://c7wxkli07w5y4" path="res://Assets/Buttons/rock icon.png" id="13_cko8e"]
+[ext_resource type="Texture2D" uid="uid://ntjmsfrsuovo" path="res://Assets/Buttons/UpgradesScreen/Bought_1.png" id="13_kwyb6"]
 [ext_resource type="Texture2D" uid="uid://pptrt0ohc7da" path="res://Assets/Buttons/disabled rock icon.png" id="14_1aho2"]
 [ext_resource type="Texture2D" uid="uid://cgvhchdqru0ax" path="res://Assets/Buttons/holy icon.png" id="14_yh0y4"]
 [ext_resource type="Texture2D" uid="uid://djoqfmviurqt2" path="res://Assets/Buttons/atomic icon.png" id="15_dmlq0"]
@@ -72,6 +73,38 @@ shader_parameter/freezeFirstHalf = false
 shader_parameter/freezeSecondHalf = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fqie1"]
+shader = ExtResource("6_17v14")
+shader_parameter/do_abs = null
+shader_parameter/do_quantize = null
+shader_parameter/quantize_to = 1.0
+shader_parameter/sine_amplitude = Vector2(0, 3)
+shader_parameter/sine_speed = Vector2(0, 3)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y42q1"]
+shader = ExtResource("6_17v14")
+shader_parameter/do_abs = null
+shader_parameter/do_quantize = null
+shader_parameter/quantize_to = 1.0
+shader_parameter/sine_amplitude = Vector2(0, 3)
+shader_parameter/sine_speed = Vector2(0, 3)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f52st"]
+shader = ExtResource("6_17v14")
+shader_parameter/do_abs = null
+shader_parameter/do_quantize = null
+shader_parameter/quantize_to = 1.0
+shader_parameter/sine_amplitude = Vector2(0, 3)
+shader_parameter/sine_speed = Vector2(0, 3)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pp5c6"]
+shader = ExtResource("6_17v14")
+shader_parameter/do_abs = null
+shader_parameter/do_quantize = null
+shader_parameter/quantize_to = 1.0
+shader_parameter/sine_amplitude = Vector2(0, 3)
+shader_parameter/sine_speed = Vector2(0, 3)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kpx3e"]
 shader = ExtResource("6_17v14")
 shader_parameter/do_abs = null
 shader_parameter/do_quantize = null
@@ -180,11 +213,12 @@ text = "Money: $100"
 
 [node name="BuyUpgrade" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1051.0
-offset_top = 588.0
-offset_right = 1115.0
-offset_bottom = 652.0
-texture_normal = ExtResource("3_v1f64")
+offset_left = 988.0
+offset_top = 573.0
+offset_right = 1138.0
+offset_bottom = 643.0
+texture_normal = ExtResource("12_gks3l")
+texture_pressed = ExtResource("13_kwyb6")
 
 [node name="UpgradeMineralWater" type="TextureButton" parent="."]
 material = SubResource("ShaderMaterial_fqie1")
@@ -206,10 +240,11 @@ offset_bottom = 5.5
 text = "Mineral Water"
 
 [node name="UpgradeHolyWater" type="TextureButton" parent="."]
+material = SubResource("ShaderMaterial_y42q1")
 layout_mode = 0
-offset_left = 670.0
+offset_left = 706.0
 offset_top = 376.0
-offset_right = 734.0
+offset_right = 770.0
 offset_bottom = 440.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("14_yh0y4")
@@ -224,6 +259,7 @@ offset_bottom = 6.0
 text = "Holy Water"
 
 [node name="UpgradeAtomicWater" type="TextureButton" parent="."]
+material = SubResource("ShaderMaterial_f52st")
 layout_mode = 0
 offset_left = 413.0
 offset_top = 540.0
@@ -242,10 +278,11 @@ offset_bottom = 6.5
 text = "Atomic Water"
 
 [node name="UpgradeHolyWaterReal" type="TextureButton" parent="."]
+material = SubResource("ShaderMaterial_pp5c6")
 layout_mode = 0
-offset_left = 673.0
+offset_left = 709.0
 offset_top = 538.0
-offset_right = 737.0
+offset_right = 773.0
 offset_bottom = 602.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("16_wi5x8")
@@ -260,10 +297,11 @@ offset_bottom = 4.5
 text = "Holy Water (Real)"
 
 [node name="UpgradeSoap" type="TextureButton" parent="."]
+material = SubResource("ShaderMaterial_kpx3e")
 layout_mode = 0
-offset_left = 591.0
+offset_left = 584.0
 offset_top = 98.0
-offset_right = 655.0
+offset_right = 648.0
 offset_bottom = 162.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("17_8f4d1")
