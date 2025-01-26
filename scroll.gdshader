@@ -1,10 +1,11 @@
 shader_type canvas_item;
 
-void sineWave() {
-
-}
-
 void vertex() {
-	UV.x += TIME * sin(0.1 * 2.0);
-	UV.y += TIME * 0.1;
+
+    float speed_modulation = sin(TIME * 0.5);
+    float speed = 0.005 * (1.0 + speed_modulation);
+    
+
+    UV.x += TIME * speed;
+    UV.y += TIME * speed;
 }
