@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://co0pj5hmm602x"]
+[gd_scene load_steps=24 format=3 uid="uid://co0pj5hmm602x"]
 
 [ext_resource type="Script" path="res://mainmenu.gd" id="1_6syls"]
 [ext_resource type="Shader" path="res://scroll.gdshader" id="2_27xmd"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://ddjvdtpso71d" path="res://Assets/Buttons/Mute_Medium.png" id="3_g1nhb"]
 [ext_resource type="Texture2D" uid="uid://sbaam1ogf2yy" path="res://Assets/Backgrounds/MainMenu_8_Large_Transparent.png" id="3_qm8sf"]
 [ext_resource type="Texture2D" uid="uid://bomp54ju0icvf" path="res://Assets/Buttons/MainMenu/Play_4.png" id="7_j7gx1"]
-[ext_resource type="Shader" path="res://Bouncer.gdshader" id="9_e1wqs"]
 [ext_resource type="Texture2D" uid="uid://ch6qxqoks847g" path="res://Assets/TitleCard.png" id="10_iaaf2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d7nwu"]
@@ -52,13 +51,20 @@ shader_parameter/secondHalf = 0.5
 shader_parameter/freezeFirstHalf = false
 shader_parameter/freezeSecondHalf = false
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_esfiw"]
-shader = ExtResource("9_e1wqs")
-shader_parameter/do_abs = null
-shader_parameter/do_quantize = null
-shader_parameter/quantize_to = 1.0
-shader_parameter/sine_amplitude = Vector2(0, 10)
-shader_parameter/sine_speed = Vector2(1, 4)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_olotx"]
+shader = ExtResource("2_vg038")
+shader_parameter/waveAmplitude = 0.126
+shader_parameter/correctVertex = true
+shader_parameter/waveFrequency = 10.0
+shader_parameter/verticalWave = true
+shader_parameter/keepTransparency = true
+shader_parameter/useTime = true
+shader_parameter/waveSpeed = 1.0
+shader_parameter/progress = 0.0
+shader_parameter/firstHalf = 0.5
+shader_parameter/secondHalf = 0.5
+shader_parameter/freezeFirstHalf = false
+shader_parameter/freezeSecondHalf = false
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -144,23 +150,21 @@ scale = Vector2(2, 2)
 texture = ExtResource("7_j7gx1")
 stretch_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_esfiw")
+[node name="TitleCard" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_olotx")
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.25
-anchor_right = 1.07812
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 160.0
-offset_right = 640.0
-offset_bottom = 360.0
+offset_left = -512.0
+offset_top = -118.0
+offset_right = 512.0
+offset_bottom = 118.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_iaaf2")
-expand_mode = 2
-stretch_mode = 2
-metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="AudioToggle" to="." method="_on_audio_toggle_pressed"]
 [connection signal="mouse_entered" from="Menu/StartButton" to="." method="_on_start_button_mouse_entered"]
