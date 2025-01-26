@@ -15,6 +15,9 @@ func add_soap() -> void:
 func add_water(added_water: String) -> void:
 	unlocked_water.append(added_water)
 
+func reset_money() -> void:
+	player_money = 0
+
 
 func spend_money(amount: int) -> bool:
 	if player_money >= amount:
