@@ -9,6 +9,7 @@ extends Node
 @onready var growth_time_elapsed: float = 0
 @onready var all_growth: float = 0
 @onready var random_growth_manager = $BubbleBlower.get_random_grower(0.8)
+@onready var random_hybrid_growth_fn: Callable = $BubbleBlower.randomised_hybrid_grow_fn_factory()
 
 
 signal popped
@@ -17,53 +18,19 @@ signal stopped
 
 
 
-# round
-	# - inputs (player upgrades - bubble-blower options, modifier for when to pop)
-	# metrics
-		# - how fast bubble grew
-		# - how big bubble is
-	# bubble-blower
-		# - player upgrades
-		# calc next growth
-			# - linear
-			# - exponential
-			# - random
-			# [stretch goal] - 'blowing' sine-wave
-	# bubble
-		# - scales sprite to growth
-		# - translate to make look like growth from machine at bottom
-	# UI
-		# Blow btn
-		# Stop btn
-		# Progress bar
-		
-	# [stretch goals]
-	# background upgrades
-		# spawn extra bubbles to pop
-	
-	
-# score screen
-	# - inputs (metrics from round)
-	# calc-money
-
-
-
-
 func _ready() -> void:	
 	$Bubble.max_growth = max_growth
-	
+
 	$StopButton.disabled = true
 	$BlowButton.visible = true
 	$StopButton.visible = false
-	
+
 	$Bubble/BubblePopSprite.stop()
 	$Bubble/BubblePopSprite.frame = 0
-	
-	$BubbleGrowthProgressBar.max_value = max_growth
-	
-	BgmPlayer.play_song_dont_pop()
 
-	
+	$BubbleGrowthProgressBar.max_value = max_growth
+
+	BgmPlayer.play_song_dont_pop()
 
 
 func _process(delta: float) -> void:
@@ -74,7 +41,8 @@ func _process(delta: float) -> void:
 		#var growth_percent = $BubbleBlower.linear_growth(growth_time_elapsed)
 		#var growth_percent = $BubbleBlower.expo_growth(growth_time_elapsed)
 		#var growth_percent = $BubbleBlower.hybrid_linear_expo_growth(growth_time_elapsed)
-		var growth_percent = random_growth_manager.random_growth(growth_time_elapsed)
+		#var growth_percent = random_growth_manager.random_growth(growth_time_elapsed)
+		var growth_percent = random_hybrid_growth_fn.call(growth_time_elapsed)
 		
 		all_growth = growth_percent * max_growth
 		$Bubble.grow(all_growth)

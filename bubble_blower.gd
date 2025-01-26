@@ -59,3 +59,23 @@ func get_random_grower(variation: float):
 	var random_manager = RandomGrowthManager.new(variation)
 	return random_manager
 	
+
+
+func hybrid_linear_expo_growth_switchover(seconds: float, force_switchover: float) -> float:
+	""" Force switchover is 0-1, ratio of max_seconds to switchover"""
+	var linear = 0.5 * linear_growth(seconds)
+	var expo = expo_growth(seconds)
+	var time_to_switchover = max_seconds * force_switchover
+	if seconds < time_to_switchover or linear > expo:
+		return linear
+	return expo
+
+		
+
+func randomised_hybrid_grow_fn_factory() -> Callable:
+	var switchover = clamp(randf(), 0.1, 0.8)
+	var partial_growth_fn = func(seconds: float) -> float:
+		return hybrid_linear_expo_growth_switchover(seconds, switchover)
+	return partial_growth_fn
+	
+	
