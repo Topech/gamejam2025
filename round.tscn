@@ -1,17 +1,17 @@
 [gd_scene load_steps=18 format=3 uid="uid://djogu8q3gy10g"]
 
 [ext_resource type="Script" path="res://round.gd" id="1_5trwk"]
-[ext_resource type="Texture2D" uid="uid://bk0qnhahjm6xg" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
+[ext_resource type="Texture2D" uid="uid://btv8ndwh2bn7c" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
 [ext_resource type="Script" path="res://bubble_blower.gd" id="2_luf3c"]
 [ext_resource type="Shader" path="res://scroll.gdshader" id="2_qn2gj"]
 [ext_resource type="Script" path="res://bubble.gd" id="2_r6xft"]
-[ext_resource type="Texture2D" uid="uid://bwu2w0sm67ipq" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
-[ext_resource type="Texture2D" uid="uid://caeq4djkq55pw" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
-[ext_resource type="Texture2D" uid="uid://dqw1v4g3xexkr" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
-[ext_resource type="Texture2D" uid="uid://dgmul52kmowwv" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
+[ext_resource type="Texture2D" uid="uid://bwy7x7j6xgdhq" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
+[ext_resource type="Texture2D" uid="uid://c1wb14ksfxf6g" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
+[ext_resource type="Texture2D" uid="uid://cxbhs43dakh5a" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
+[ext_resource type="Texture2D" uid="uid://bofi5p7jxscje" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
 [ext_resource type="Script" path="res://bubble_pop_sprite.gd" id="6_52slm"]
-[ext_resource type="Texture2D" uid="uid://ds000cgaq1t53" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
-[ext_resource type="Texture2D" uid="uid://cmgjji8a7l4x4" path="res://Assets/hehehehe.png" id="11_hr2cq"]
+[ext_resource type="Texture2D" uid="uid://c338uvyvhgkdn" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
+[ext_resource type="Texture2D" uid="uid://d3xsy0l3gtpew" path="res://Assets/hehehehe.png" id="11_hr2cq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q3657"]
 shader = ExtResource("2_qn2gj")
@@ -19,6 +19,8 @@ shader = ExtResource("2_qn2gj")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k13kh"]
 
 [sub_resource type="GDScript" id="GDScript_nhb06"]
+script/source = "extends ProgressBar
+"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3yefv"]
 

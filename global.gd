@@ -6,6 +6,8 @@ extends Node
 @export var unlocked_water: Array = ["swamp"] # Unlocked water array
 @export var chosen_water: String = unlocked_water[0]
 
+var sound_player: AudioStreamPlayer
+
 
 func add_money(amount: int) -> void:
 	player_money += amount
@@ -40,3 +42,14 @@ func get_money() -> int:
 	
 func get_soap() -> int:
 	return soap_level
+
+
+func play_button_sound():
+	sound_player.play()
+	
+
+func _ready() -> void:
+	sound_player = AudioStreamPlayer.new()
+	add_child(sound_player)
+	sound_player.stream = preload("res://bubble_tiny.wav")
+	

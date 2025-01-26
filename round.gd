@@ -16,8 +16,6 @@ signal popped
 signal stopped
 
 
-
-
 func _ready() -> void:	
 	$Bubble.max_growth = max_growth
 

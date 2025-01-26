@@ -44,21 +44,27 @@ Description:
 
 # Following code is for determining which upgrade is selected
 func _on_upgrade_soap_pressed() -> void:
+	Global.play_button_sound()
 	selected_button = "soap"
 
 func _on_upgrade_mineral_water_pressed() -> void:
+	Global.play_button_sound()
 	selected_button = "mineral_water"
 
 func _on_upgrade_holy_water_pressed() -> void:
+	Global.play_button_sound()
 	selected_button = "holy_water"
 
 func _on_upgrade_atomic_water_pressed() -> void:
+	Global.play_button_sound()
 	selected_button = "atomic_water"
 
 func _on_upgrade_holy_water_real_pressed() -> void:
+	Global.play_button_sound()
 	selected_button = "holy_water_real"
 
 func _on_buy_upgrade_pressed() -> void:
+	Global.play_button_sound()
 	if Global.spend_money(upgrade_cost):
 		match selected_button:
 			"soap":
