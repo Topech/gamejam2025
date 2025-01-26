@@ -7,7 +7,7 @@ func _ready():
 	Global.add_money(money_earned)
 
 	if metrics != null:
-		$RichTextLabel.text = " bubble size: %s,   time taken %s   money %s" % [metrics.bubble_size, metrics.time_taken, money_earned]
+		$RichTextLabel.text = " bubble size: %s,   time taken %s\n   money earned $%s   total money $%s" % [metrics.bubble_size, metrics.time_taken, money_earned, Global.get_money()]
 
 
 

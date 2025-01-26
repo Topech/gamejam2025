@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxr1qlxk68ubk"]
+[gd_scene load_steps=3 format=3 uid="uid://brbhsyxskh16g"]
 
 [ext_resource type="Script" path="res://gameover.gd" id="1_o75tj"]
 [ext_resource type="Script" path="res://Scrollingdeathtext.gd" id="2_ydf8x"]
@@ -32,5 +32,11 @@ offset_top = 568.0
 offset_right = 680.0
 offset_bottom = 599.0
 text = "Try again"
+
+[node name="MoneyLostText" type="RichTextLabel" parent="."]
+offset_left = 486.0
+offset_top = 434.0
+offset_right = 1122.0
+offset_bottom = 474.0
 
 [connection signal="pressed" from="TryAgainButton" to="." method="_on_try_again_button_pressed"]
