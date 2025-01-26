@@ -9,6 +9,9 @@ func add_money(amount: int) -> void:
 	player_money += amount
 
 
+func reset_money() -> void:
+	player_money = 0
+
 
 func spend_money(amount: int) -> bool:
 	if player_money >= amount:
