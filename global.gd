@@ -91,3 +91,9 @@ func _ready() -> void:
 	sxf_timer.wait_time = 0.5
 	sxf_timer.one_shot = false
 	sxf_timer.connect("timeout", play_pump_sound)
+
+
+func reset_on_gameover():
+	reset_money()
+	soap_level = 1
+	unlocked_water = ['swamp']
