@@ -15,7 +15,7 @@ func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://round.tscn")
 
 func _on_options_button_pressed() -> void:
-	pass # Replace with function body.
+	pass
 
 func _on_start_button_mouse_entered() -> void:
 	$Menu/StartButton/StartButtonTooltip.visible = true
@@ -26,5 +26,6 @@ func _on_start_button_mouse_exited() -> void:
 
 
 func _on_audio_toggle_pressed() -> void:
+	Global.play_button_sound()
 	muted = !muted
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), muted)

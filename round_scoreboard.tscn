@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://otsn0t6n3dkd"]
+[gd_scene load_steps=6 format=3 uid="uid://mumw4l40dd53"]
 
 [ext_resource type="Script" path="res://round_scoreboard.gd" id="1_02xr5"]
+[ext_resource type="Shader" path="res://scroll.gdshader" id="2_fpbh5"]
+[ext_resource type="Texture2D" uid="uid://p66r43g3wipq" path="res://Assets/Backgrounds/MainMenu_8_Large_Transparent.png" id="3_hgspi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_onmkt"]
+resource_local_to_scene = true
+shader = ExtResource("2_fpbh5")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qvtr6"]
 
 [node name="RoundScoreboard" type="Control"]
 layout_mode = 3
@@ -13,17 +21,31 @@ script = ExtResource("1_02xr5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 248.0
-offset_top = 183.0
-offset_right = 994.0
-offset_bottom = 538.0
+offset_left = 318.0
+offset_top = 245.0
+offset_right = 911.0
+offset_bottom = 379.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_onmkt")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_hgspi")
+stretch_mode = 1
 
 [node name="NextButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 535.0
-offset_top = 596.0
-offset_right = 640.0
-offset_bottom = 627.0
+offset_left = 549.0
+offset_top = 595.0
+offset_right = 658.0
+offset_bottom = 626.0
 text = "To Upgrades"
+icon = SubResource("ViewportTexture_qvtr6")
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

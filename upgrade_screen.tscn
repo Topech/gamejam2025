@@ -1,17 +1,79 @@
-[gd_scene load_steps=11 format=3 uid="uid://c4c5o5aqtvimi"]
+[gd_scene load_steps=23 format=3 uid="uid://c4c5o5aqtvimi"]
 
-[ext_resource type="Texture2D" uid="uid://uu116ta75q4" path="res://icon.svg" id="1_08ja4"]
+[ext_resource type="Shader" path="res://BalloonPixelater.gdshader" id="1_i3fsf"]
 [ext_resource type="Script" path="res://upgrade_screen.gd" id="1_ypabj"]
 [ext_resource type="Script" path="res://next_day_button.gd" id="2_8j4kv"]
-[ext_resource type="Texture2D" uid="uid://cg3ows3ls45fp" path="res://Assets/Bubbles/bubble2.png" id="3_v1f64"]
-[ext_resource type="Texture2D" uid="uid://ktxqpfafwfsy" path="res://Assets/Buttons/rock icon.png" id="5_055rn"]
+[ext_resource type="Texture2D" uid="uid://daw335udelwhh" path="res://Assets/Backgrounds/Upgrades_Screen/UpgradesShopTexture_S.png" id="2_edweg"]
+[ext_resource type="Texture2D" uid="uid://cmewhholwviym" path="res://Assets/Panels/Upgrades_Screen_Panel.png" id="3_r2jn1"]
+[ext_resource type="Shader" path="res://wavy.gdshader" id="3_ul5d8"]
+[ext_resource type="Texture2D" uid="uid://lde0whwxhq7s" path="res://Assets/Bubbles/bubble2.png" id="3_v1f64"]
+[ext_resource type="Texture2D" uid="uid://bksvk8dfkm2sd" path="res://Assets/Bubbles/bubble1.png" id="4_owdd5"]
+[ext_resource type="Texture2D" uid="uid://btb7eprbdgusf" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple.png" id="5_2bhk6"]
+[ext_resource type="Texture2D" uid="uid://ceqtfair5blwv" path="res://Assets/Bubbles/bubble3.png" id="5_nihfo"]
+[ext_resource type="Texture2D" uid="uid://q7s7wi4t234m" path="res://Assets/Buttons/UpgradesScreen/Next_Day_Button.png" id="6_3xpb3"]
+[ext_resource type="Shader" path="res://Bouncer.gdshader" id="6_17v14"]
+[ext_resource type="Texture2D" uid="uid://chn8s1fgqe13g" path="res://Assets/Buttons/UpgradesScreen/UpgradesScreenCounter.png" id="6_635tf"]
 [ext_resource type="Script" path="res://upgrade_soap_button.gd" id="6_ahvdy"]
-[ext_resource type="Texture2D" uid="uid://c3h40em487dtb" path="res://Assets/Buttons/holy icon.png" id="6_noy44"]
-[ext_resource type="Texture2D" uid="uid://1ccath1amdiy" path="res://Assets/Buttons/atomic icon.png" id="7_m1abd"]
-[ext_resource type="Texture2D" uid="uid://ygenp22cyxt" path="res://Assets/Backgrounds/holy real icon.png" id="8_r04ny"]
-[ext_resource type="Texture2D" uid="uid://bslxhb742i1mg" path="res://Assets/Buttons/soap icon.png" id="9_x2ael"]
+[ext_resource type="Texture2D" uid="uid://db3d1l8f2cxbv" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple_Large.png" id="6_aropa"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t654t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7gocn"]
+shader = ExtResource("1_i3fsf")
+shader_parameter/amount = 12
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s3rsb"]
+resource_local_to_scene = true
+shader = ExtResource("3_ul5d8")
+shader_parameter/waveAmplitude = 0.015
+shader_parameter/correctVertex = true
+shader_parameter/waveFrequency = 10.0
+shader_parameter/verticalWave = true
+shader_parameter/keepTransparency = true
+shader_parameter/useTime = true
+shader_parameter/waveSpeed = 1.0
+shader_parameter/progress = 0.0
+shader_parameter/firstHalf = 0.5
+shader_parameter/secondHalf = 0.5
+shader_parameter/freezeFirstHalf = false
+shader_parameter/freezeSecondHalf = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rwsbm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pk1l6"]
+resource_local_to_scene = true
+shader = ExtResource("6_17v14")
+shader_parameter/do_abs = null
+shader_parameter/do_quantize = null
+shader_parameter/quantize_to = 1.0
+shader_parameter/sine_amplitude = Vector2(0, 1)
+shader_parameter/sine_speed = Vector2(0, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_re1o2"]
+shader = ExtResource("3_ul5d8")
+shader_parameter/waveAmplitude = 0.002
+shader_parameter/correctVertex = true
+shader_parameter/waveFrequency = 10.0
+shader_parameter/verticalWave = true
+shader_parameter/keepTransparency = true
+shader_parameter/useTime = true
+shader_parameter/waveSpeed = 1.0
+shader_parameter/progress = 0.0
+shader_parameter/firstHalf = 0.5
+shader_parameter/secondHalf = 0.5
+shader_parameter/freezeFirstHalf = false
+shader_parameter/freezeSecondHalf = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fqie1"]
+shader = ExtResource("6_17v14")
+shader_parameter/do_abs = null
+shader_parameter/do_quantize = null
+shader_parameter/quantize_to = 1.0
+shader_parameter/sine_amplitude = Vector2(0, 3)
+shader_parameter/sine_speed = Vector2(0, 3)
 
 [node name="UpgradeScreen" type="Control"]
+material = SubResource("ShaderMaterial_t654t")
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,16 +82,74 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ypabj")
 
-[node name="NextDayButton" type="TextureButton" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_7gocn")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_edweg")
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_s3rsb")
 layout_mode = 0
-offset_left = 71.0
-offset_top = 534.0
-offset_right = 199.0
-offset_bottom = 662.0
-texture_normal = ExtResource("1_08ja4")
+anchor_left = 0.767969
+anchor_top = 0.380556
+anchor_right = 0.892969
+anchor_bottom = 0.713889
+texture = ExtResource("3_r2jn1")
+metadata/_edit_use_anchors_ = true
+
+[node name="Small Shelf" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_rwsbm")
+layout_mode = 0
+offset_left = 537.0
+offset_top = 474.0
+offset_right = 667.0
+offset_bottom = 514.0
+texture = ExtResource("5_2bhk6")
+
+[node name="Large Shelf" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_rwsbm")
+layout_mode = 0
+offset_left = 277.0
+offset_top = 396.0
+offset_right = 467.0
+offset_bottom = 436.0
+texture = ExtResource("6_aropa")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -88.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("6_635tf")
+expand_mode = 2
+
+[node name="NextDayButton" type="TextureButton" parent="."]
+material = SubResource("ShaderMaterial_pk1l6")
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -220.0
+offset_right = 350.0
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("6_3xpb3")
 script = ExtResource("2_8j4kv")
 
-[node name="Description" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+material = SubResource("ShaderMaterial_re1o2")
 layout_mode = 0
 offset_left = 999.0
 offset_top = 230.0
@@ -60,6 +180,7 @@ offset_bottom = 652.0
 texture_normal = ExtResource("3_v1f64")
 
 [node name="UpgradeMineralWater" type="TextureButton" parent="."]
+material = SubResource("ShaderMaterial_fqie1")
 layout_mode = 0
 offset_left = 431.0
 offset_top = 386.0
