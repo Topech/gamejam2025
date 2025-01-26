@@ -1,20 +1,27 @@
-[gd_scene load_steps=23 format=3 uid="uid://c4c5o5aqtvimi"]
+[gd_scene load_steps=30 format=3 uid="uid://c4c5o5aqtvimi"]
 
 [ext_resource type="Shader" path="res://BalloonPixelater.gdshader" id="1_i3fsf"]
 [ext_resource type="Script" path="res://upgrade_screen.gd" id="1_ypabj"]
 [ext_resource type="Script" path="res://next_day_button.gd" id="2_8j4kv"]
-[ext_resource type="Texture2D" uid="uid://daw335udelwhh" path="res://Assets/Backgrounds/Upgrades_Screen/UpgradesShopTexture_S.png" id="2_edweg"]
-[ext_resource type="Texture2D" uid="uid://cmewhholwviym" path="res://Assets/Panels/Upgrades_Screen_Panel.png" id="3_r2jn1"]
+[ext_resource type="Texture2D" uid="uid://bg458f36mgj8d" path="res://Assets/Backgrounds/Upgrades_Screen/UpgradesShopTexture_S.png" id="2_edweg"]
+[ext_resource type="Texture2D" uid="uid://ctogr64m6e0o1" path="res://Assets/Panels/Upgrades_Screen_Panel.png" id="3_r2jn1"]
 [ext_resource type="Shader" path="res://wavy.gdshader" id="3_ul5d8"]
-[ext_resource type="Texture2D" uid="uid://lde0whwxhq7s" path="res://Assets/Bubbles/bubble2.png" id="3_v1f64"]
-[ext_resource type="Texture2D" uid="uid://bksvk8dfkm2sd" path="res://Assets/Bubbles/bubble1.png" id="4_owdd5"]
-[ext_resource type="Texture2D" uid="uid://btb7eprbdgusf" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple.png" id="5_2bhk6"]
-[ext_resource type="Texture2D" uid="uid://ceqtfair5blwv" path="res://Assets/Bubbles/bubble3.png" id="5_nihfo"]
-[ext_resource type="Texture2D" uid="uid://q7s7wi4t234m" path="res://Assets/Buttons/UpgradesScreen/Next_Day_Button.png" id="6_3xpb3"]
+[ext_resource type="Texture2D" uid="uid://dv7uj2ytr1m5k" path="res://Assets/Bubbles/bubble2.png" id="3_v1f64"]
+[ext_resource type="Texture2D" uid="uid://bgx63d7gjdqbv" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple.png" id="5_2bhk6"]
+[ext_resource type="Texture2D" uid="uid://bjgqav02xyhil" path="res://Assets/Buttons/UpgradesScreen/Next_Day_Button.png" id="6_3xpb3"]
 [ext_resource type="Shader" path="res://Bouncer.gdshader" id="6_17v14"]
-[ext_resource type="Texture2D" uid="uid://chn8s1fgqe13g" path="res://Assets/Buttons/UpgradesScreen/UpgradesScreenCounter.png" id="6_635tf"]
+[ext_resource type="Texture2D" uid="uid://bbtt60os1kmca" path="res://Assets/Buttons/UpgradesScreen/UpgradesScreenCounter.png" id="6_635tf"]
 [ext_resource type="Script" path="res://upgrade_soap_button.gd" id="6_ahvdy"]
-[ext_resource type="Texture2D" uid="uid://db3d1l8f2cxbv" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple_Large.png" id="6_aropa"]
+[ext_resource type="Texture2D" uid="uid://y3b0h8kra5ev" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple_Large.png" id="6_aropa"]
+[ext_resource type="Texture2D" uid="uid://c7wxkli07w5y4" path="res://Assets/Buttons/rock icon.png" id="13_cko8e"]
+[ext_resource type="Texture2D" uid="uid://pptrt0ohc7da" path="res://Assets/Buttons/disabled rock icon.png" id="14_1aho2"]
+[ext_resource type="Texture2D" uid="uid://cgvhchdqru0ax" path="res://Assets/Buttons/holy icon.png" id="14_yh0y4"]
+[ext_resource type="Texture2D" uid="uid://djoqfmviurqt2" path="res://Assets/Buttons/atomic icon.png" id="15_dmlq0"]
+[ext_resource type="Texture2D" uid="uid://by1qmvh6u2pfl" path="res://Assets/Buttons/disabled holy icon.png" id="16_jwa00"]
+[ext_resource type="Texture2D" uid="uid://bs45vmb33mn0y" path="res://Assets/Backgrounds/holy real icon.png" id="16_wi5x8"]
+[ext_resource type="Texture2D" uid="uid://s1a2o0p424xw" path="res://Assets/Buttons/soap icon.png" id="17_8f4d1"]
+[ext_resource type="Texture2D" uid="uid://dath404in3eiu" path="res://Assets/Buttons/disabled atomic icon.png" id="18_4fvxm"]
+[ext_resource type="Texture2D" uid="uid://ds0dmtr6hvdcl" path="res://Assets/Buttons/disabled holy real icon.png" id="20_ilwtu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t654t"]
 
@@ -162,52 +169,13 @@ Cost: $10000000
 Description:
 Lorem Ipsum"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 565.0
-offset_top = 57.0
-offset_right = 738.0
-offset_bottom = 89.0
-text = "Soap Upgrade"
-
-[node name="RichTextLabel4" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 405.0
-offset_top = 364.0
-offset_right = 520.0
-offset_bottom = 396.0
-text = "Mineral Water"
-
-[node name="RichTextLabel5" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 630.0
-offset_top = 368.0
-offset_right = 745.0
-offset_bottom = 400.0
-text = "Holy Water"
-
-[node name="RichTextLabel6" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 420.0
-offset_top = 532.0
-offset_right = 535.0
-offset_bottom = 564.0
-text = "Atomic Water"
-
-[node name="RichTextLabel7" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 607.0
-offset_top = 533.0
-offset_right = 770.0
-offset_bottom = 561.0
-text = "Holy Water (Real)"
-
 [node name="CurrentMoney" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 53.0
 offset_top = 42.0
-offset_right = 226.0
-offset_bottom = 75.0
+offset_right = 263.0
+offset_bottom = 91.0
+theme_override_font_sizes/normal_font_size = 32
 text = "Money: $100"
 
 [node name="BuyUpgrade" type="TextureButton" parent="."]
@@ -221,35 +189,75 @@ texture_normal = ExtResource("3_v1f64")
 [node name="UpgradeMineralWater" type="TextureButton" parent="."]
 material = SubResource("ShaderMaterial_fqie1")
 layout_mode = 0
-offset_left = 431.0
-offset_top = 403.0
-offset_right = 495.0
-offset_bottom = 467.0
-texture_normal = ExtResource("4_owdd5")
+offset_left = 410.0
+offset_top = 376.0
+offset_right = 474.0
+offset_bottom = 440.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("13_cko8e")
+texture_disabled = ExtResource("14_1aho2")
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="UpgradeMineralWater"]
+layout_mode = 0
+offset_left = -30.0
+offset_top = -26.5
+offset_right = 85.0
+offset_bottom = 5.5
+text = "Mineral Water"
 
 [node name="UpgradeHolyWater" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 641.0
-offset_top = 403.0
-offset_right = 705.0
-offset_bottom = 467.0
-texture_normal = ExtResource("4_owdd5")
+offset_left = 670.0
+offset_top = 376.0
+offset_right = 734.0
+offset_bottom = 440.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("14_yh0y4")
+texture_disabled = ExtResource("16_jwa00")
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="UpgradeHolyWater"]
+layout_mode = 0
+offset_left = -16.5
+offset_top = -26.0
+offset_right = 73.5
+offset_bottom = 6.0
+text = "Holy Water"
 
 [node name="UpgradeAtomicWater" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 434.0
-offset_top = 567.0
-offset_right = 498.0
-offset_bottom = 631.0
-texture_normal = ExtResource("4_owdd5")
+offset_left = 413.0
+offset_top = 540.0
+offset_right = 477.0
+offset_bottom = 604.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("15_dmlq0")
+texture_disabled = ExtResource("18_4fvxm")
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="UpgradeAtomicWater"]
+layout_mode = 0
+offset_left = -23.5
+offset_top = -25.5
+offset_right = 82.5
+offset_bottom = 6.5
+text = "Atomic Water"
 
 [node name="UpgradeHolyWaterReal" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 644.0
-offset_top = 565.0
-offset_right = 708.0
-offset_bottom = 629.0
-texture_normal = ExtResource("4_owdd5")
+offset_left = 673.0
+offset_top = 538.0
+offset_right = 737.0
+offset_bottom = 602.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("16_wi5x8")
+texture_disabled = ExtResource("20_ilwtu")
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="UpgradeHolyWaterReal"]
+layout_mode = 0
+offset_left = -37.0
+offset_top = -23.5
+offset_right = 99.0
+offset_bottom = 4.5
+text = "Holy Water (Real)"
 
 [node name="UpgradeSoap" type="TextureButton" parent="."]
 layout_mode = 0
@@ -257,8 +265,17 @@ offset_left = 591.0
 offset_top = 98.0
 offset_right = 655.0
 offset_bottom = 162.0
-texture_normal = ExtResource("5_nihfo")
+scale = Vector2(2, 2)
+texture_normal = ExtResource("17_8f4d1")
 script = ExtResource("6_ahvdy")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UpgradeSoap"]
+layout_mode = 0
+offset_left = -26.5
+offset_top = -28.5
+offset_right = 84.5
+offset_bottom = 3.5
+text = "Soap Upgrade"
 
 [connection signal="pressed" from="NextDayButton" to="NextDayButton" method="_on_pressed"]
 [connection signal="pressed" from="BuyUpgrade" to="." method="_on_buy_upgrade_pressed"]

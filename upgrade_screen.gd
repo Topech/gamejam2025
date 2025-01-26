@@ -12,6 +12,16 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	$CurrentMoney.text = "Money: $" + str(Global.get_money())
+	
+	if Global.get_unlocked_water().has("mineral_water"):
+		$UpgradeMineralWater.disabled = true
+	if Global.get_unlocked_water().has("holy_water"):
+		$UpgradeHolyWater.disabled = true
+	if Global.get_unlocked_water().has("atomic_water"):
+		$UpgradeAtomicWater.disabled = true
+	if Global.get_unlocked_water().has("holy_water_real"):
+		$UpgradeHolyWaterReal.disabled = true
+	
 	match selected_button:
 		"soap":
 			description_title = "Soap"
@@ -70,5 +80,5 @@ func _on_buy_upgrade_pressed() -> void:
 			"soap":
 				Global.add_soap()
 			_:
-				Global.add_water("selected_button")
+				Global.add_water(selected_button)
 	

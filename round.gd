@@ -39,15 +39,15 @@ func _process(delta: float) -> void:
 
 		var growth_percent: float
 		match Global.chosen_water:
-			"atomic":
+			"atomic_water":
 				growth_percent = random_growth_manager.random_growth(growth_time_elapsed)
-			"holy(real)":
+			"holy_water_real":
 				growth_percent = random_hybrid_growth_fn.call(growth_time_elapsed)
-			"holy":
+			"holy_water":
 				growth_percent = $BubbleBlower.hybrid_linear_expo_growth(growth_time_elapsed)
-			"mineral":
+			"mineral_water":
 				growth_percent = $BubbleBlower.expo_growth(growth_time_elapsed)
-			"swamp":
+			"swamp_water":
 				growth_percent = $BubbleBlower.linear_growth(growth_time_elapsed)
 
 			
