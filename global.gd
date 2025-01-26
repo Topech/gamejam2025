@@ -13,8 +13,8 @@ var pump_player: AudioStreamPlayer
 
 # for pump
 var interval_timer = 0.7
-var min_pitch = 0.7
-var max_pitch = 1.3
+var min_pitch = 0.6
+var max_pitch = 1.2
 var rng = RandomNumberGenerator.new()
 var sxf_timer: Timer
 var is_pump_playing: bool = false  
@@ -88,6 +88,6 @@ func _ready() -> void:
 	pump_player.stream = preload("res://sfx_pump.wav")
 	sxf_timer = Timer.new()
 	add_child(sxf_timer)
-	sxf_timer.wait_time = 0.5
+	sxf_timer.wait_time = 0.4
 	sxf_timer.one_shot = false
 	sxf_timer.connect("timeout", play_pump_sound)
