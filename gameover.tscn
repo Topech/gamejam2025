@@ -1,28 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://brbhsyxskh16g"]
+[gd_scene load_steps=4 format=3 uid="uid://brbhsyxskh16g"]
 
 [ext_resource type="Script" path="res://gameover.gd" id="1_o75tj"]
+[ext_resource type="Texture2D" uid="uid://c7hqig22b1f8g" path="res://Assets/Bubble Over.png" id="2_63rs3"]
 [ext_resource type="Script" path="res://Scrollingdeathtext.gd" id="2_ydf8x"]
 
 [node name="Gameover" type="Node"]
 script = ExtResource("1_o75tj")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(624, 331)
+texture = ExtResource("2_63rs3")
+
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 offset_left = 471.0
 offset_top = 689.0
 offset_right = 817.0
-offset_bottom = 2240.0
-text = "The final pop of your bubble echoes out amongst the pink hues of the background, colour begins draining from the world and the hopes of all mankind dwindle. Your bubble popped. . . that's it. . . no more bubble blowing, no more bubble sales, your loyal bubble buying bubble customers dissipate in disappointment and you are forced to close shop. The bubble business is coming to close, you might have been the last homegrown bubble salesperson left, it's a tough market but for years you've made it work. Your family didn't initially believe in you, oweing to the market and current economy, they thought you should just get a normal job, like repairing non-specific machines as they catch fire or bluescreen. That was what your brother did, always the wiser sibling he went right into the trade and became the best in the business. They called him The Mechanic back in the day. But what use is reminiscing on the past, that's not what lead you here, no, you were brought here by something greater. A purpose, glorious and shiny, with a wicked bubble-like sheen, has haunted you since the day you first got your first bubble blower as a child. You knew this life was what you were meant for, bubble haters and bubblephobes be damned, you loved the bubbles, and you made them your calling even if you knew it couldn't last. A lot of things in this life don't last, your friendships, your marriage, but the bubbles, the bubbles were always there, always ready and willing to be blown. But this time, you're the one who's really blown things. You blew too greedily and too deeply, and now you've paid the ultimate price. 40 long years you've been blowing bubbles, and all it took was one pop to bring it all crashing down. You look out around you at your bubble shop, vacant, cold, caked in dust and bubble debris. Noones come here for a long time, darkness loomed after your pop, and from now on, darkness is all you'll ever know.
+offset_bottom = 2240.
+bbcode_enabled = true
+text = "[center]The final pop of your bubble echoes out amongst the pink hues of the background, colour begins draining from the world and the hopes of all mankind dwindle. Your bubble popped. . . that's it. . . no more bubble blowing, no more bubble sales, your loyal bubble buying bubble customers dissipate in disappointment and you are forced to close shop. The bubble business is coming to close, you might have been the last homegrown bubble salesperson left, it's a tough market but for years you've made it work. Your family didn't initially believe in you, oweing to the market and current economy, they thought you should just get a normal job, like repairing non-specific machines as they catch fire or bluescreen. That was what your brother did, always the wiser sibling he went right into the trade and became the best in the business. They called him The Mechanic back in the day. But what use is reminiscing on the past, that's not what lead you here, no, you were brought here by something greater. A purpose, glorious and shiny, with a wicked bubble-like sheen, has haunted you since the day you first got your first bubble blower as a child. You knew this life was what you were meant for, bubble haters and bubblephobes be damned, you loved the bubbles, and you made them your calling even if you knew it couldn't last. A lot of things in this life don't last, your friendships, your marriage, but the bubbles, the bubbles were always there, always ready and willing to be blown. But this time, you're the one who's really blown things. You blew too greedily and too deeply, and now you've paid the ultimate price. 40 long years you've been blowing bubbles, and all it took was one pop to bring it all crashing down. You look out around you at your bubble shop, vacant, cold, caked in dust and bubble debris. Noones come here for a long time, darkness loomed after your pop, and from now on, darkness is all you'll ever know.
 
-All good things must come to an end. Like a bubble, everythings gotta burst."
+All good things must come to an end. Like a bubble, everythings gotta burst.[/center]"
 fit_content = true
 script = ExtResource("2_ydf8x")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 593.0
-offset_top = 357.0
-offset_right = 706.0
-offset_bottom = 397.0
-text = "Game Over"
 
 [node name="TryAgainButton" type="Button" parent="."]
 offset_left = 601.0
@@ -32,9 +31,10 @@ offset_bottom = 599.0
 text = "Try again"
 
 [node name="MoneyLostText" type="RichTextLabel" parent="."]
-offset_left = 486.0
-offset_top = 434.0
-offset_right = 1122.0
-offset_bottom = 474.0
+offset_left = 327.0
+offset_top = 430.0
+offset_right = 963.0
+offset_bottom = 470.0
+bbcode_enabled = true
 
 [connection signal="pressed" from="TryAgainButton" to="." method="_on_try_again_button_pressed"]
