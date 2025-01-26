@@ -1,20 +1,24 @@
 [gd_scene load_steps=18 format=3 uid="uid://djogu8q3gy10g"]
 
 [ext_resource type="Script" path="res://round.gd" id="1_5trwk"]
-[ext_resource type="Texture2D" uid="uid://kjkpn0eiyb1l" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
+[ext_resource type="Texture2D" uid="uid://bk0qnhahjm6xg" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
 [ext_resource type="Script" path="res://bubble_blower.gd" id="2_luf3c"]
 [ext_resource type="Shader" path="res://scroll.gdshader" id="2_qn2gj"]
 [ext_resource type="Script" path="res://bubble.gd" id="2_r6xft"]
-[ext_resource type="Texture2D" uid="uid://boexr1bvscu84" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
-[ext_resource type="Texture2D" uid="uid://b073o6fbl0pb8" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
-[ext_resource type="Texture2D" uid="uid://jgsmghiv14ca" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
-[ext_resource type="Texture2D" uid="uid://by1xcll1cat64" path="res://Assets/Machine/Machine2.png" id="4_bf5nj"]
-[ext_resource type="Texture2D" uid="uid://ddr3xoa7ijgu" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
+[ext_resource type="Texture2D" uid="uid://bwu2w0sm67ipq" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
+[ext_resource type="Texture2D" uid="uid://caeq4djkq55pw" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
+[ext_resource type="Texture2D" uid="uid://dqw1v4g3xexkr" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
+[ext_resource type="Texture2D" uid="uid://dgmul52kmowwv" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
 [ext_resource type="Script" path="res://bubble_pop_sprite.gd" id="6_52slm"]
-[ext_resource type="Texture2D" uid="uid://c3tmfips88b30" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
+[ext_resource type="Texture2D" uid="uid://ds000cgaq1t53" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
+[ext_resource type="Texture2D" uid="uid://cmgjji8a7l4x4" path="res://Assets/hehehehe.png" id="11_hr2cq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q3657"]
 shader = ExtResource("2_qn2gj")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k13kh"]
+
+[sub_resource type="GDScript" id="GDScript_nhb06"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3yefv"]
 
@@ -42,10 +46,6 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_k13kh"]
-
-[sub_resource type="GDScript" id="GDScript_nhb06"]
-
 [node name="Round" type="Node"]
 script = ExtResource("1_5trwk")
 
@@ -63,47 +63,28 @@ stretch_mode = 1
 [node name="Metrics" type="Node" parent="."]
 
 [node name="BubbleMountMarker" type="Marker2D" parent="."]
-position = Vector2(561, 515)
+position = Vector2(550, 603)
 
 [node name="BubbleBlower" type="Node" parent="."]
 script = ExtResource("2_luf3c")
 
-[node name="Bubble" type="Node2D" parent="." node_paths=PackedStringArray("bottom_mount_marker")]
-position = Vector2(560, 316)
-script = ExtResource("2_r6xft")
-bottom_mount_marker = NodePath("../BubbleMountMarker")
-
-[node name="Sprite2D" type="Sprite2D" parent="Bubble"]
-visible = false
-modulate = Color(0.851765, 0.191647, 0.498869, 1)
-texture = ExtResource("2_yca1n")
-
-[node name="BubblePopSprite" type="AnimatedSprite2D" parent="Bubble"]
-material = SubResource("ShaderMaterial_3yefv")
-sprite_frames = SubResource("SpriteFrames_cdmdu")
-animation = &"Pop"
-script = ExtResource("6_52slm")
-
-[node name="BubbleBottomMarker" type="Marker2D" parent="Bubble"]
-position = Vector2(0, 30.5)
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(561.5, 619.25)
-scale = Vector2(16.8065, 15.6538)
-texture = ExtResource("4_bf5nj")
+position = Vector2(632, 485)
+scale = Vector2(7.806, 7.271)
+texture = ExtResource("11_hr2cq")
 
 [node name="BlowButton" type="Button" parent="."]
-offset_left = 538.0
-offset_top = 537.0
-offset_right = 584.0
-offset_bottom = 568.0
+offset_left = 530.0
+offset_top = 623.0
+offset_right = 576.0
+offset_bottom = 654.0
 text = "Blow"
 
 [node name="StopButton" type="Button" parent="."]
-offset_left = 539.0
-offset_top = 537.0
-offset_right = 585.0
-offset_bottom = 568.0
+offset_left = 528.0
+offset_top = 623.0
+offset_right = 574.0
+offset_bottom = 654.0
 text = "Stop"
 
 [node name="IntegrityBar" type="TextureRect" parent="."]
@@ -131,6 +112,25 @@ fill_mode = 3
 show_percentage = false
 script = SubResource("GDScript_nhb06")
 
-[connection signal="animation_finished" from="Bubble/BubblePopSprite" to="Bubble/BubblePopSprite" method="_on_animation_finished"]
+[node name="Bubble" type="Node2D" parent="." node_paths=PackedStringArray("bottom_mount_marker")]
+position = Vector2(560, 316)
+script = ExtResource("2_r6xft")
+bottom_mount_marker = NodePath("../BubbleMountMarker")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bubble"]
+visible = false
+modulate = Color(0.851765, 0.191647, 0.498869, 1)
+texture = ExtResource("2_yca1n")
+
+[node name="BubblePopSprite" type="AnimatedSprite2D" parent="Bubble"]
+material = SubResource("ShaderMaterial_3yefv")
+sprite_frames = SubResource("SpriteFrames_cdmdu")
+animation = &"Pop"
+script = ExtResource("6_52slm")
+
+[node name="BubbleBottomMarker" type="Marker2D" parent="Bubble"]
+position = Vector2(0, 30.5)
+
 [connection signal="pressed" from="BlowButton" to="." method="_on_blow_button_pressed"]
 [connection signal="pressed" from="StopButton" to="." method="_on_stop_button_pressed"]
+[connection signal="animation_finished" from="Bubble/BubblePopSprite" to="Bubble/BubblePopSprite" method="_on_animation_finished"]
