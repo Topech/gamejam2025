@@ -94,3 +94,9 @@ func _ready() -> void:
 
 func get_unlocked_water() -> Array:
 	return unlocked_water
+
+
+func reset_on_gameover():
+	reset_money()
+	soap_level = 1
+	unlocked_water = ['swamp_water']
