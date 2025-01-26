@@ -1,9 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://brbhsyxskh16g"]
+[gd_scene load_steps=3 format=3 uid="uid://bxr1qlxk68ubk"]
 
 [ext_resource type="Script" path="res://gameover.gd" id="1_o75tj"]
+[ext_resource type="Script" path="res://Scrollingdeathtext.gd" id="2_ydf8x"]
 
 [node name="Gameover" type="Node"]
 script = ExtResource("1_o75tj")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 471.0
+offset_top = 689.0
+offset_right = 817.0
+offset_bottom = 2240.0
+text = "As the fragile membrane of the bubble tore, a cascade of iridescent droplets scattered into the air, shimmering like a dying star. But with its collapse, the world seemed to hold its breath—then exhale chaos. The air grew heavy, thick with a strange hum that resonated in the bones of every living creature. Cracks splintered across the sky, as if the fabric of reality itself was unraveling. Oceans surged and boiled, their waves reaching for the heavens, while cities crumbled into dust under an unseen pressure. The bubble had been more than a playful sphere; it had held the balance of existence, and now, as its remnants evaporated into nothingness, the world was left to witness its own undoing. Silence fell, broken only by the faint whisper of the void creeping closer.
+\"As the shimmering bubble gave way to its violent collapse, the world was forever changed. They called it the Fracture, a moment when the fragile boundary between existence and the void was torn asunder. None knew the true origins of the bubble—whether it was the careless folly of forgotten gods, the arcane whimsy of ancient sorcerers, or the dying gasp of an old universe—but its bursting marked the start of a descent into chaos.
+
+The first to feel the effects were the great kingdoms of men. Storms, like maddened titans, swept across their lands, uprooting towers and shattering walls. Crops withered in the fields overnight, leaving nothing but dust and despair. Worse still were the Unraveled, the once-living who had been caught in the shockwave of the bubble's demise. Their flesh twisted and stretched, their minds hollowed, they now roamed the shattered world as harbingers of the void’s creeping corruption.
+
+The scholars of Illyrion delved deep into the lost tomes of their libraries, uncovering fragments of forbidden lore. The bubble, they claimed, had been the Seal of Aelthion, a prison of unimaginable power meant to contain the Abyss Eternal—a darkness older than time itself."
+script = ExtResource("2_ydf8x")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 593.0
