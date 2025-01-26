@@ -61,7 +61,7 @@ func _ready() -> void:
 	
 	$BubbleGrowthProgressBar.max_value = max_growth
 	
-	BgmPlayer.crossfade(load("res://Assets/Music/GGJ2025Bubble-Don'tPop.ogg"))
+	BgmPlayer.play_song_dont_pop()
 
 	
 
@@ -91,10 +91,9 @@ func pop():
 	$Bubble/BubblePopSprite.play_pop()
 	is_growing = false
 	emit_signal("popped")
-	await get_tree().create_timer(1).timeout
+	BgmPlayer.play_song_game_over()
+	await get_tree().create_timer(0.6).timeout
 	get_tree().change_scene_to_file("res://gameover.tscn")
-
-	
 
 
 
@@ -114,6 +113,7 @@ func _on_stop_button_pressed() -> void:
 	Global.round_metrics = metrics
 	emit_signal("stopped", metrics)
 	await get_tree().create_timer(1).timeout
+  BgmPlayer.play_song_wont_pop()
 	get_tree().change_scene_to_file("res://round_scoreboard.tscn")
 
 	
