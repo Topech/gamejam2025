@@ -34,6 +34,17 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	
+	if Global.get_unlocked_water().has("swamp_water"):
+		$SwampWaterButton.visible = true
+	if Global.get_unlocked_water().has("mineral_water"):
+		$MineralWaterButton.visible = true
+	if Global.get_unlocked_water().has("holy_water"):
+		$HolyWaterButton.visible = true
+	if Global.get_unlocked_water().has("atomic_water"):
+		$AtomicWaterButton.visible = true
+	if Global.get_unlocked_water().has("holy_water_real"):
+		$HolyWaterRealButton.visible = true
+	
 	if is_growing:
 		growth_time_elapsed += delta
 
@@ -96,3 +107,42 @@ func _on_stop_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://round_scoreboard.tscn")
 
 	
+
+
+func _on_swamp_water_button_pressed() -> void:
+	Global.chosen_water = "swamp_water"
+	$MineralWaterButton.button_pressed = false
+	$HolyWaterButton.button_pressed = false
+	$AtomicWaterButton.button_pressed = false
+	$HolyWaterRealButton.button_pressed = false
+
+func _on_mineral_water_button_pressed() -> void:
+	Global.chosen_water = "mineral_water"
+	$SwampWaterButton.button_pressed = false
+	$HolyWaterButton.button_pressed = false
+	$AtomicWaterButton.button_pressed = false
+	$HolyWaterRealButton.button_pressed = false
+
+
+func _on_holy_water_button_pressed() -> void:
+	Global.chosen_water = "holy_water"
+	$SwampWaterButton.button_pressed = false
+	$MineralWaterButton.button_pressed = false
+	$AtomicWaterButton.button_pressed = false
+	$HolyWaterRealButton.button_pressed = false
+
+
+func _on_atomic_water_button_pressed() -> void:
+	Global.chosen_water = "atomic_water"
+	$SwampWaterButton.button_pressed = false
+	$MineralWaterButton.button_pressed = false
+	$HolyWaterButton.button_pressed = false
+	$HolyWaterRealButton.button_pressed = false
+
+
+func _on_holy_water_real_button_pressed() -> void:
+	Global.chosen_water = "holy_water_real"
+	$SwampWaterButton.button_pressed = false
+	$MineralWaterButton.button_pressed = false
+	$HolyWaterButton.button_pressed = false
+	$AtomicWaterButton.button_pressed = false

@@ -1,21 +1,31 @@
-[gd_scene load_steps=22 format=3 uid="uid://djogu8q3gy10g"]
+[gd_scene load_steps=32 format=3 uid="uid://djogu8q3gy10g"]
 
 [ext_resource type="Script" path="res://round.gd" id="1_5trwk"]
-[ext_resource type="Texture2D" uid="uid://5ehg7u644b45" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
+[ext_resource type="Texture2D" uid="uid://b7q0g4me5psaq" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
 [ext_resource type="Script" path="res://bubble_blower.gd" id="2_luf3c"]
 [ext_resource type="Shader" path="res://scroll.gdshader" id="2_qn2gj"]
 [ext_resource type="Script" path="res://bubble.gd" id="2_r6xft"]
-[ext_resource type="Texture2D" uid="uid://bksvk8dfkm2sd" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
-[ext_resource type="Texture2D" uid="uid://lde0whwxhq7s" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
-[ext_resource type="Texture2D" uid="uid://ceqtfair5blwv" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
-[ext_resource type="Texture2D" uid="uid://d8t3d4nvsl2s" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
+[ext_resource type="Texture2D" uid="uid://c1vili2nxrmrh" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
+[ext_resource type="Texture2D" uid="uid://dv7uj2ytr1m5k" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
+[ext_resource type="Texture2D" uid="uid://dxhyh8vabs0va" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
+[ext_resource type="Texture2D" uid="uid://dkr0a7a8a8bqt" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
 [ext_resource type="Script" path="res://bubble_pop_sprite.gd" id="6_52slm"]
-[ext_resource type="Texture2D" uid="uid://ck673mvjmu6km" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
-[ext_resource type="Texture2D" uid="uid://t26stqgpmtiq" path="res://Assets/hehehehe.png" id="11_hr2cq"]
-[ext_resource type="Texture2D" uid="uid://b8wmk5mdccjlq" path="res://Assets/Buttons/Round/Blow/Blow_4.png" id="12_lk1jn"]
-[ext_resource type="Texture2D" uid="uid://ds5340dquc6qf" path="res://Assets/Buttons/Round/Blow/Blow_Shadow.png" id="13_dttws"]
-[ext_resource type="Texture2D" uid="uid://baoo6jgx8s10n" path="res://Assets/Buttons/Round/Stop/Stop_accented.png" id="14_6x8mc"]
-[ext_resource type="Texture2D" uid="uid://dmvbiqeywajwf" path="res://Assets/Buttons/Round/Stop/Stop_Pressed.png" id="15_be3ap"]
+[ext_resource type="Texture2D" uid="uid://cwbu6o7oyfkj" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
+[ext_resource type="Texture2D" uid="uid://cmkhvkvpwgqxj" path="res://Assets/hehehehe.png" id="11_hr2cq"]
+[ext_resource type="Texture2D" uid="uid://c75ff6pihbker" path="res://Assets/Buttons/Round/Blow/Blow_4.png" id="12_lk1jn"]
+[ext_resource type="Texture2D" uid="uid://2flffhl3ee08" path="res://Assets/Buttons/Round/Blow/Blow_Shadow.png" id="13_dttws"]
+[ext_resource type="Texture2D" uid="uid://dlxi5pegfo724" path="res://Assets/Buttons/Round/Stop/Stop_accented.png" id="14_6x8mc"]
+[ext_resource type="Texture2D" uid="uid://bypfvyl61etjs" path="res://Assets/Buttons/Round/Stop/Stop_Pressed.png" id="15_be3ap"]
+[ext_resource type="Texture2D" uid="uid://crkj567ic32ph" path="res://Assets/Buttons/disabled swamp icon.png" id="17_fqhun"]
+[ext_resource type="Texture2D" uid="uid://1rf50y15222i" path="res://Assets/Buttons/swamp icon.png" id="18_bkmrp"]
+[ext_resource type="Texture2D" uid="uid://pptrt0ohc7da" path="res://Assets/Buttons/disabled rock icon.png" id="19_grl4f"]
+[ext_resource type="Texture2D" uid="uid://c7wxkli07w5y4" path="res://Assets/Buttons/rock icon.png" id="20_xltn6"]
+[ext_resource type="Texture2D" uid="uid://by1qmvh6u2pfl" path="res://Assets/Buttons/disabled holy icon.png" id="21_v7u3l"]
+[ext_resource type="Texture2D" uid="uid://cgvhchdqru0ax" path="res://Assets/Buttons/holy icon.png" id="22_1td0u"]
+[ext_resource type="Texture2D" uid="uid://dath404in3eiu" path="res://Assets/Buttons/disabled atomic icon.png" id="23_gupgm"]
+[ext_resource type="Texture2D" uid="uid://djoqfmviurqt2" path="res://Assets/Buttons/atomic icon.png" id="24_4gyri"]
+[ext_resource type="Texture2D" uid="uid://ds0dmtr6hvdcl" path="res://Assets/Buttons/disabled holy real icon.png" id="25_gh2sp"]
+[ext_resource type="Texture2D" uid="uid://bs45vmb33mn0y" path="res://Assets/Backgrounds/holy real icon.png" id="26_35sf2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q3657"]
 shader = ExtResource("2_qn2gj")
@@ -139,6 +149,65 @@ script = ExtResource("6_52slm")
 [node name="BubbleBottomMarker" type="Marker2D" parent="Bubble"]
 position = Vector2(0, 30.5)
 
+[node name="SwampWaterButton" type="TextureButton" parent="."]
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 78.0
+offset_bottom = 76.0
+scale = Vector2(2, 2)
+toggle_mode = true
+texture_normal = ExtResource("17_fqhun")
+texture_pressed = ExtResource("18_bkmrp")
+
+[node name="MineralWaterButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 22.0
+offset_top = 136.0
+offset_right = 78.0
+offset_bottom = 192.0
+scale = Vector2(2, 2)
+toggle_mode = true
+texture_normal = ExtResource("19_grl4f")
+texture_pressed = ExtResource("20_xltn6")
+
+[node name="HolyWaterButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 22.0
+offset_top = 252.0
+offset_right = 78.0
+offset_bottom = 308.0
+scale = Vector2(2, 2)
+toggle_mode = true
+texture_normal = ExtResource("21_v7u3l")
+texture_pressed = ExtResource("22_1td0u")
+
+[node name="AtomicWaterButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 22.0
+offset_top = 368.0
+offset_right = 78.0
+offset_bottom = 424.0
+scale = Vector2(2, 2)
+toggle_mode = true
+texture_normal = ExtResource("23_gupgm")
+texture_pressed = ExtResource("24_4gyri")
+
+[node name="HolyWaterRealButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 22.0
+offset_top = 485.0
+offset_right = 78.0
+offset_bottom = 541.0
+scale = Vector2(2, 2)
+toggle_mode = true
+texture_normal = ExtResource("25_gh2sp")
+texture_pressed = ExtResource("26_35sf2")
+
 [connection signal="pressed" from="BlowButton" to="." method="_on_blow_button_pressed"]
 [connection signal="pressed" from="StopButton" to="." method="_on_stop_button_pressed"]
 [connection signal="animation_finished" from="Bubble/BubblePopSprite" to="Bubble/BubblePopSprite" method="_on_animation_finished"]
+[connection signal="pressed" from="SwampWaterButton" to="." method="_on_swamp_water_button_pressed"]
+[connection signal="pressed" from="MineralWaterButton" to="." method="_on_mineral_water_button_pressed"]
+[connection signal="pressed" from="HolyWaterButton" to="." method="_on_holy_water_button_pressed"]
+[connection signal="pressed" from="AtomicWaterButton" to="." method="_on_atomic_water_button_pressed"]
+[connection signal="pressed" from="HolyWaterRealButton" to="." method="_on_holy_water_real_button_pressed"]
