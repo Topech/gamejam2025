@@ -2,6 +2,7 @@ extends Control
 
 
 func _ready():
+	Global.play_victory_sound()
 	var metrics = Global.round_metrics
 	var money_earned = calc_money(metrics)
 	Global.add_money(money_earned)
