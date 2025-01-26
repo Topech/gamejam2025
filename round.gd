@@ -113,7 +113,7 @@ func _on_stop_button_pressed() -> void:
 	Global.round_metrics = metrics
 	emit_signal("stopped", metrics)
 	await get_tree().create_timer(1).timeout
-  BgmPlayer.play_song_wont_pop()
+	BgmPlayer.play_song_wont_pop()
 	get_tree().change_scene_to_file("res://round_scoreboard.tscn")
 
 	
