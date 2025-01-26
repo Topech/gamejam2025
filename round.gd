@@ -63,10 +63,12 @@ func _process(delta: float) -> void:
 
 
 func pop():
+	Global.stop_pump()
 	$StopButton.disabled = true
 	$Bubble/BubblePopSprite.play_pop()
 	is_growing = false
 	emit_signal("popped")
+	Global.play_pop_sound()
 	BgmPlayer.play_song_game_over()
 	await get_tree().create_timer(0.6).timeout
 	get_tree().change_scene_to_file("res://gameover.tscn")
@@ -79,11 +81,13 @@ func _on_blow_button_pressed() -> void:
 	$StopButton.disabled = false
 	$BlowButton.visible = false
 	$StopButton.visible = true
+	Global.start_pump()
 
 
 
 func _on_stop_button_pressed() -> void:
 	is_growing = false
+	Global.stop_pump()
 	$StopButton.disabled = true
 	var metrics = MetricStruct.new(growth_time_elapsed, all_growth)
 	Global.round_metrics = metrics
