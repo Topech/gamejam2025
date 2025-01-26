@@ -48,3 +48,11 @@ func play_song_game_over() -> void:
 func stop_music() -> void:
 	track_1.playing = false
 	track_2.playing = false
+
+
+func _on_track_1_finished() -> void:
+	track_1.play()
+
+
+func _on_track_2_finished() -> void:
+	track_2.play()
