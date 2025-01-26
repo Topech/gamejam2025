@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://vd0sss5orj3v" path="res://Assets/Buttons/MainMenu/Play_4.png" id="7_j7gx1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d7nwu"]
+resource_local_to_scene = true
 shader = ExtResource("2_27xmd")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx3b4"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://djogu8q3gy10g"]
+[gd_scene load_steps=17 format=3 uid="uid://djogu8q3gy10g"]
 
 [ext_resource type="Script" path="res://round.gd" id="1_5trwk"]
 [ext_resource type="Texture2D" uid="uid://dt64aflwydfo2" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
@@ -14,6 +14,8 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q3657"]
 shader = ExtResource("2_qn2gj")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3yefv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cdmdu"]
 resource_local_to_scene = true
@@ -76,6 +78,7 @@ modulate = Color(0.851765, 0.191647, 0.498869, 1)
 texture = ExtResource("2_yca1n")
 
 [node name="BubblePopSprite" type="AnimatedSprite2D" parent="Bubble"]
+material = SubResource("ShaderMaterial_3yefv")
 sprite_frames = SubResource("SpriteFrames_cdmdu")
 animation = &"Pop"
 script = ExtResource("6_52slm")
