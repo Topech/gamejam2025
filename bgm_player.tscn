@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://benaerra0ix16"]
 
 [ext_resource type="Script" path="res://bgm_player.gd" id="1_3bivh"]
-[ext_resource type="AudioStream" uid="uid://xgacyj8muplg" path="res://Assets/Music/GGJ2025Bubble-Won'tPop.ogg" id="2_h2mvj"]
-[ext_resource type="AudioStream" uid="uid://cut2dcvxqmrpg" path="res://Assets/Music/GGJ2025Bubble-Don'tPop.ogg" id="3_jnhvh"]
+[ext_resource type="AudioStream" uid="uid://ba772crnphyrt" path="res://Assets/Music/GGJ2025Bubble-Won'tPop.ogg" id="2_h2mvj"]
+[ext_resource type="AudioStream" uid="uid://duo7ei8v51s8v" path="res://Assets/Music/GGJ2025Bubble-Don'tPop.ogg" id="3_jnhvh"]
 
 [sub_resource type="Animation" id="Animation_2sx65"]
 resource_name = "FadeToTrack1"

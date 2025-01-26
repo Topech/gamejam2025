@@ -3,12 +3,12 @@
 [ext_resource type="Script" path="res://mainmenu.gd" id="1_6syls"]
 [ext_resource type="Shader" path="res://scroll.gdshader" id="2_27xmd"]
 [ext_resource type="Script" path="res://start_button.gd" id="2_d5gbx"]
-[ext_resource type="Texture2D" uid="uid://d327mc06y0pa6" path="res://Assets/Buttons/Unmute_Medium.png" id="2_h262g"]
+[ext_resource type="Texture2D" uid="uid://cqu3gb3f1w7w8" path="res://Assets/Buttons/Unmute_Medium.png" id="2_h262g"]
 [ext_resource type="Shader" path="res://wavy.gdshader" id="2_vg038"]
-[ext_resource type="Texture2D" uid="uid://rdkcq31h63j3" path="res://Assets/Buttons/Mute_Medium.png" id="3_g1nhb"]
-[ext_resource type="Texture2D" uid="uid://byr75hqqbdfsa" path="res://Assets/Backgrounds/MainMenu_8_Large_Transparent.png" id="3_qm8sf"]
-[ext_resource type="Texture2D" uid="uid://ccgmyeea7uuso" path="res://Assets/Buttons/MainMenu/Play_4.png" id="7_j7gx1"]
-[ext_resource type="Texture2D" uid="uid://bg5uya307ehv8" path="res://Assets/TitleCard.png" id="10_iaaf2"]
+[ext_resource type="Texture2D" uid="uid://ddjvdtpso71d" path="res://Assets/Buttons/Mute_Medium.png" id="3_g1nhb"]
+[ext_resource type="Texture2D" uid="uid://sbaam1ogf2yy" path="res://Assets/Backgrounds/MainMenu_8_Large_Transparent.png" id="3_qm8sf"]
+[ext_resource type="Texture2D" uid="uid://bomp54ju0icvf" path="res://Assets/Buttons/MainMenu/Play_4.png" id="7_j7gx1"]
+[ext_resource type="Texture2D" uid="uid://ch6qxqoks847g" path="res://Assets/TitleCard.png" id="10_iaaf2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d7nwu"]
 resource_local_to_scene = true

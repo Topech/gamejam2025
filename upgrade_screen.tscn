@@ -3,26 +3,26 @@
 [ext_resource type="Shader" path="res://BalloonPixelater.gdshader" id="1_i3fsf"]
 [ext_resource type="Script" path="res://upgrade_screen.gd" id="1_ypabj"]
 [ext_resource type="Script" path="res://next_day_button.gd" id="2_8j4kv"]
-[ext_resource type="Texture2D" uid="uid://ckp5hp53ib04v" path="res://Assets/Backgrounds/Upgrades_Screen/UpgradesShopTexture_S.png" id="2_edweg"]
-[ext_resource type="Texture2D" uid="uid://2hlhwxyans8o" path="res://Assets/Panels/Upgrades_Screen_Panel.png" id="3_r2jn1"]
+[ext_resource type="Texture2D" uid="uid://daw335udelwhh" path="res://Assets/Backgrounds/Upgrades_Screen/UpgradesShopTexture_S.png" id="2_edweg"]
+[ext_resource type="Texture2D" uid="uid://cmewhholwviym" path="res://Assets/Panels/Upgrades_Screen_Panel.png" id="3_r2jn1"]
 [ext_resource type="Shader" path="res://wavy.gdshader" id="3_ul5d8"]
-[ext_resource type="Texture2D" uid="uid://ebg4okmjkkbh" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple.png" id="5_2bhk6"]
-[ext_resource type="Texture2D" uid="uid://b08ifdw0lxca4" path="res://Assets/Buttons/UpgradesScreen/Next_Day_Button.png" id="6_3xpb3"]
+[ext_resource type="Texture2D" uid="uid://btb7eprbdgusf" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple.png" id="5_2bhk6"]
+[ext_resource type="Texture2D" uid="uid://q7s7wi4t234m" path="res://Assets/Buttons/UpgradesScreen/Next_Day_Button.png" id="6_3xpb3"]
 [ext_resource type="Shader" path="res://Bouncer.gdshader" id="6_17v14"]
-[ext_resource type="Texture2D" uid="uid://oduomhqdqdf2" path="res://Assets/Buttons/UpgradesScreen/UpgradesScreenCounter.png" id="6_635tf"]
+[ext_resource type="Texture2D" uid="uid://chn8s1fgqe13g" path="res://Assets/Buttons/UpgradesScreen/UpgradesScreenCounter.png" id="6_635tf"]
 [ext_resource type="Script" path="res://upgrade_soap_button.gd" id="6_ahvdy"]
-[ext_resource type="Texture2D" uid="uid://d21ohgf487qlj" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple_Large.png" id="6_aropa"]
-[ext_resource type="Texture2D" uid="uid://bo8datf7t2wd5" path="res://Assets/Buttons/UpgradesScreen/Buy_1.png" id="12_gks3l"]
-[ext_resource type="Texture2D" uid="uid://chhafpv4xf114" path="res://Assets/Buttons/rock icon.png" id="13_cko8e"]
-[ext_resource type="Texture2D" uid="uid://dhpxs03pljr8o" path="res://Assets/Buttons/UpgradesScreen/Bought_1.png" id="13_kwyb6"]
-[ext_resource type="Texture2D" uid="uid://dtcfs3jwwkwjk" path="res://Assets/Buttons/disabled rock icon.png" id="14_1aho2"]
-[ext_resource type="Texture2D" uid="uid://d08wn71uj1f0u" path="res://Assets/Buttons/holy icon.png" id="14_yh0y4"]
-[ext_resource type="Texture2D" uid="uid://cdrcfl1x4p4bq" path="res://Assets/Buttons/atomic icon.png" id="15_dmlq0"]
-[ext_resource type="Texture2D" uid="uid://wkkqf0uw0fqp" path="res://Assets/Buttons/disabled holy icon.png" id="16_jwa00"]
-[ext_resource type="Texture2D" uid="uid://277emjqdy8li" path="res://Assets/Backgrounds/holy real icon.png" id="16_wi5x8"]
-[ext_resource type="Texture2D" uid="uid://cffoaupgburmh" path="res://Assets/Buttons/soap icon.png" id="17_8f4d1"]
-[ext_resource type="Texture2D" uid="uid://cwrk1lgpmjq42" path="res://Assets/Buttons/disabled atomic icon.png" id="18_4fvxm"]
-[ext_resource type="Texture2D" uid="uid://cossmgy6s4ft" path="res://Assets/Buttons/disabled holy real icon.png" id="20_ilwtu"]
+[ext_resource type="Texture2D" uid="uid://b1lf4k5d4h388" path="res://Assets/Buttons/UpgradesScreen/Buy_1.png" id="12_gks3l"]
+[ext_resource type="FontFile" uid="uid://dwyp4ip0xwej0" path="res://MedodicaRegular.otf" id="12_yhqa0"]
+[ext_resource type="Texture2D" uid="uid://bn5u3qsi822mk" path="res://Assets/Buttons/rock icon.png" id="13_cko8e"]
+[ext_resource type="Texture2D" uid="uid://y3ej5hqhbwwt" path="res://Assets/Buttons/UpgradesScreen/Bought_1.png" id="13_kwyb6"]
+[ext_resource type="Texture2D" uid="uid://pwtvan0k16gl" path="res://Assets/Buttons/disabled rock icon.png" id="14_1aho2"]
+[ext_resource type="Texture2D" uid="uid://b6vcs1byioh3y" path="res://Assets/Buttons/holy icon.png" id="14_yh0y4"]
+[ext_resource type="Texture2D" uid="uid://bkgkpn2qb6bow" path="res://Assets/Buttons/atomic icon.png" id="15_dmlq0"]
+[ext_resource type="Texture2D" uid="uid://be31k456vu3ev" path="res://Assets/Buttons/disabled holy icon.png" id="16_jwa00"]
+[ext_resource type="Texture2D" uid="uid://jac11yinjv0e" path="res://Assets/Backgrounds/holy real icon.png" id="16_wi5x8"]
+[ext_resource type="Texture2D" uid="uid://ci3k1rom3xayc" path="res://Assets/Buttons/soap icon.png" id="17_8f4d1"]
+[ext_resource type="Texture2D" uid="uid://3wrr2lfm7kqr" path="res://Assets/Buttons/disabled atomic icon.png" id="18_4fvxm"]
+[ext_resource type="Texture2D" uid="uid://6rybsa8o8e06" path="res://Assets/Buttons/disabled holy real icon.png" id="20_ilwtu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t654t"]
 
@@ -146,20 +146,11 @@ metadata/_edit_use_anchors_ = true
 [node name="Small Shelf" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_rwsbm")
 layout_mode = 0
-offset_left = 537.0
-offset_top = 474.0
-offset_right = 667.0
-offset_bottom = 514.0
+offset_left = 540.0
+offset_top = 214.0
+offset_right = 670.0
+offset_bottom = 254.0
 texture = ExtResource("5_2bhk6")
-
-[node name="Large Shelf" type="TextureRect" parent="."]
-material = SubResource("ShaderMaterial_rwsbm")
-layout_mode = 0
-offset_left = 277.0
-offset_top = 396.0
-offset_right = 467.0
-offset_bottom = 436.0
-texture = ExtResource("6_aropa")
 
 [node name="TextureRect3" type="TextureRect" parent="."]
 layout_mode = 1
@@ -191,10 +182,11 @@ script = ExtResource("2_8j4kv")
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 material = SubResource("ShaderMaterial_re1o2")
 layout_mode = 0
-offset_left = 999.0
-offset_top = 230.0
-offset_right = 1216.0
-offset_bottom = 528.0
+offset_left = 1002.0
+offset_top = 289.0
+offset_right = 1219.0
+offset_bottom = 587.0
+theme_override_fonts/normal_font = ExtResource("12_yhqa0")
 text = "Upgrade X
 -------------------------
 Cost: $10000000
@@ -202,117 +194,131 @@ Cost: $10000000
 Description:
 Lorem Ipsum"
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 39.0
+offset_right = 200.0
+offset_bottom = 79.0
+color = Color(0.334744, 0.334744, 0.334744, 1)
+
 [node name="CurrentMoney" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 53.0
 offset_top = 42.0
 offset_right = 328.0
 offset_bottom = 91.0
+theme_override_fonts/normal_font = ExtResource("12_yhqa0")
 theme_override_font_sizes/normal_font_size = 32
 text = "Money: $100"
 
 [node name="BuyUpgrade" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 988.0
-offset_top = 573.0
-offset_right = 1138.0
-offset_bottom = 643.0
+offset_left = 977.0
+offset_top = 538.0
+offset_right = 1127.0
+offset_bottom = 608.0
 texture_normal = ExtResource("12_gks3l")
 texture_pressed = ExtResource("13_kwyb6")
 
 [node name="UpgradeMineralWater" type="TextureButton" parent="."]
 material = SubResource("ShaderMaterial_fqie1")
 layout_mode = 0
-offset_left = 410.0
-offset_top = 376.0
-offset_right = 474.0
-offset_bottom = 440.0
+offset_left = 346.0
+offset_top = 270.0
+offset_right = 410.0
+offset_bottom = 334.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("13_cko8e")
 texture_disabled = ExtResource("14_1aho2")
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="UpgradeMineralWater"]
 layout_mode = 0
-offset_left = -30.0
-offset_top = -26.5
-offset_right = 85.0
-offset_bottom = 5.5
+offset_left = -16.0
+offset_top = -20.5
+offset_right = 99.0
+offset_bottom = 11.5
+theme_override_fonts/normal_font = ExtResource("12_yhqa0")
 text = "Mineral Water"
 
 [node name="UpgradeHolyWater" type="TextureButton" parent="."]
 material = SubResource("ShaderMaterial_y42q1")
 layout_mode = 0
-offset_left = 706.0
-offset_top = 376.0
-offset_right = 770.0
-offset_bottom = 440.0
+offset_left = 757.0
+offset_top = 269.0
+offset_right = 821.0
+offset_bottom = 333.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("14_yh0y4")
 texture_disabled = ExtResource("16_jwa00")
 
 [node name="RichTextLabel5" type="RichTextLabel" parent="UpgradeHolyWater"]
 layout_mode = 0
-offset_left = -16.5
-offset_top = -26.0
-offset_right = 73.5
-offset_bottom = 6.0
+offset_left = -4.5
+offset_top = -20.0
+offset_right = 85.5
+offset_bottom = 12.0
+theme_override_fonts/normal_font = ExtResource("12_yhqa0")
 text = "Holy Water"
 
 [node name="UpgradeAtomicWater" type="TextureButton" parent="."]
 material = SubResource("ShaderMaterial_f52st")
 layout_mode = 0
-offset_left = 413.0
-offset_top = 540.0
-offset_right = 477.0
-offset_bottom = 604.0
+offset_left = 347.0
+offset_top = 497.0
+offset_right = 411.0
+offset_bottom = 561.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("15_dmlq0")
 texture_disabled = ExtResource("18_4fvxm")
 
 [node name="RichTextLabel6" type="RichTextLabel" parent="UpgradeAtomicWater"]
 layout_mode = 0
-offset_left = -23.5
-offset_top = -25.5
-offset_right = 82.5
-offset_bottom = 6.5
+offset_left = -8.5
+offset_top = -21.5
+offset_right = 97.5
+offset_bottom = 10.5
+theme_override_fonts/normal_font = ExtResource("12_yhqa0")
 text = "Atomic Water"
 
 [node name="UpgradeHolyWaterReal" type="TextureButton" parent="."]
 material = SubResource("ShaderMaterial_pp5c6")
 layout_mode = 0
-offset_left = 709.0
-offset_top = 538.0
-offset_right = 773.0
-offset_bottom = 602.0
+offset_left = 749.0
+offset_top = 492.0
+offset_right = 813.0
+offset_bottom = 556.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("16_wi5x8")
 texture_disabled = ExtResource("20_ilwtu")
 
 [node name="RichTextLabel7" type="RichTextLabel" parent="UpgradeHolyWaterReal"]
 layout_mode = 0
-offset_left = -37.0
-offset_top = -23.5
-offset_right = 99.0
-offset_bottom = 4.5
+offset_left = -28.0
+offset_top = -19.5
+offset_right = 108.0
+offset_bottom = 8.5
+theme_override_fonts/normal_font = ExtResource("12_yhqa0")
 text = "Holy Water (Real)"
 
 [node name="UpgradeSoap" type="TextureButton" parent="."]
 material = SubResource("ShaderMaterial_kpx3e")
 layout_mode = 0
-offset_left = 584.0
-offset_top = 98.0
-offset_right = 648.0
-offset_bottom = 162.0
+offset_left = 549.0
+offset_top = 89.0
+offset_right = 613.0
+offset_bottom = 153.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("17_8f4d1")
 script = ExtResource("6_ahvdy")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="UpgradeSoap"]
 layout_mode = 0
-offset_left = -26.5
-offset_top = -28.5
-offset_right = 84.5
-offset_bottom = 3.5
+offset_left = -6.5
+offset_top = -24.0
+offset_right = 104.5
+offset_bottom = 8.0
+theme_override_fonts/normal_font = ExtResource("12_yhqa0")
 text = "Soap Upgrade"
 
 [connection signal="pressed" from="NextDayButton" to="NextDayButton" method="_on_pressed"]
