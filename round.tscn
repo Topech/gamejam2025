@@ -1,16 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://djogu8q3gy10g"]
+[gd_scene load_steps=18 format=3 uid="uid://djogu8q3gy10g"]
 
 [ext_resource type="Script" path="res://round.gd" id="1_5trwk"]
-[ext_resource type="Texture2D" uid="uid://dt64aflwydfo2" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
+[ext_resource type="Texture2D" uid="uid://kjkpn0eiyb1l" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
 [ext_resource type="Script" path="res://bubble_blower.gd" id="2_luf3c"]
 [ext_resource type="Shader" path="res://scroll.gdshader" id="2_qn2gj"]
 [ext_resource type="Script" path="res://bubble.gd" id="2_r6xft"]
-[ext_resource type="Texture2D" uid="uid://c6cylpji4j10f" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
-[ext_resource type="Texture2D" uid="uid://n84kggblds68" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
-[ext_resource type="Texture2D" uid="uid://cpjleeyw34kbv" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
-[ext_resource type="Texture2D" uid="uid://b28npn1vx2aq8" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
+[ext_resource type="Texture2D" uid="uid://boexr1bvscu84" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
+[ext_resource type="Texture2D" uid="uid://b073o6fbl0pb8" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
+[ext_resource type="Texture2D" uid="uid://jgsmghiv14ca" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
+[ext_resource type="Texture2D" uid="uid://by1xcll1cat64" path="res://Assets/Machine/Machine2.png" id="4_bf5nj"]
+[ext_resource type="Texture2D" uid="uid://ddr3xoa7ijgu" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
 [ext_resource type="Script" path="res://bubble_pop_sprite.gd" id="6_52slm"]
-[ext_resource type="Texture2D" uid="uid://b3hwjah3ys73i" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
+[ext_resource type="Texture2D" uid="uid://c3tmfips88b30" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q3657"]
 shader = ExtResource("2_qn2gj")
@@ -85,6 +86,11 @@ script = ExtResource("6_52slm")
 
 [node name="BubbleBottomMarker" type="Marker2D" parent="Bubble"]
 position = Vector2(0, 30.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(561.5, 619.25)
+scale = Vector2(16.8065, 15.6538)
+texture = ExtResource("4_bf5nj")
 
 [node name="BlowButton" type="Button" parent="."]
 offset_left = 538.0
