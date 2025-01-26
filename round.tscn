@@ -1,17 +1,21 @@
-[gd_scene load_steps=18 format=3 uid="uid://djogu8q3gy10g"]
+[gd_scene load_steps=22 format=3 uid="uid://djogu8q3gy10g"]
 
 [ext_resource type="Script" path="res://round.gd" id="1_5trwk"]
-[ext_resource type="Texture2D" uid="uid://kjkpn0eiyb1l" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
+[ext_resource type="Texture2D" uid="uid://5ehg7u644b45" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
 [ext_resource type="Script" path="res://bubble_blower.gd" id="2_luf3c"]
 [ext_resource type="Shader" path="res://scroll.gdshader" id="2_qn2gj"]
 [ext_resource type="Script" path="res://bubble.gd" id="2_r6xft"]
-[ext_resource type="Texture2D" uid="uid://boexr1bvscu84" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
-[ext_resource type="Texture2D" uid="uid://b073o6fbl0pb8" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
-[ext_resource type="Texture2D" uid="uid://jgsmghiv14ca" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
-[ext_resource type="Texture2D" uid="uid://by1xcll1cat64" path="res://Assets/Machine/Machine2.png" id="4_bf5nj"]
-[ext_resource type="Texture2D" uid="uid://ddr3xoa7ijgu" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
+[ext_resource type="Texture2D" uid="uid://bksvk8dfkm2sd" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
+[ext_resource type="Texture2D" uid="uid://lde0whwxhq7s" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
+[ext_resource type="Texture2D" uid="uid://ceqtfair5blwv" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
+[ext_resource type="Texture2D" uid="uid://8oklaylwg2ub" path="res://Assets/Machine/Machine2.png" id="4_bf5nj"]
+[ext_resource type="Texture2D" uid="uid://d8t3d4nvsl2s" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
 [ext_resource type="Script" path="res://bubble_pop_sprite.gd" id="6_52slm"]
-[ext_resource type="Texture2D" uid="uid://c3tmfips88b30" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
+[ext_resource type="Texture2D" uid="uid://ck673mvjmu6km" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
+[ext_resource type="Texture2D" uid="uid://b8wmk5mdccjlq" path="res://Assets/Buttons/Round/Blow/Blow_4.png" id="12_lk1jn"]
+[ext_resource type="Texture2D" uid="uid://ds5340dquc6qf" path="res://Assets/Buttons/Round/Blow/Blow_Shadow.png" id="13_dttws"]
+[ext_resource type="Texture2D" uid="uid://baoo6jgx8s10n" path="res://Assets/Buttons/Round/Stop/Stop_accented.png" id="14_6x8mc"]
+[ext_resource type="Texture2D" uid="uid://dmvbiqeywajwf" path="res://Assets/Buttons/Round/Stop/Stop_Pressed.png" id="15_be3ap"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q3657"]
 shader = ExtResource("2_qn2gj")
@@ -92,19 +96,21 @@ position = Vector2(561.5, 619.25)
 scale = Vector2(16.8065, 15.6538)
 texture = ExtResource("4_bf5nj")
 
-[node name="BlowButton" type="Button" parent="."]
+[node name="BlowButton" type="TextureButton" parent="."]
 offset_left = 538.0
 offset_top = 537.0
 offset_right = 584.0
 offset_bottom = 568.0
-text = "Blow"
+texture_normal = ExtResource("12_lk1jn")
+texture_pressed = ExtResource("13_dttws")
 
-[node name="StopButton" type="Button" parent="."]
+[node name="StopButton" type="TextureButton" parent="."]
 offset_left = 539.0
 offset_top = 537.0
 offset_right = 585.0
 offset_bottom = 568.0
-text = "Stop"
+texture_normal = ExtResource("14_6x8mc")
+texture_pressed = ExtResource("15_be3ap")
 
 [node name="IntegrityBar" type="TextureRect" parent="."]
 offset_left = 1146.0
