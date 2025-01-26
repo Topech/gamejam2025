@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cho83458romts"]
 
-[ext_resource type="PackedScene" uid="uid://c6a6sgpnvrubx" path="res://mainmenu.tscn" id="1_qoq1w"]
+[ext_resource type="PackedScene" uid="uid://co0pj5hmm602x" path="res://mainmenu.tscn" id="1_qoq1w"]
 
 [node name="Hovertest" type="Node2D"]
 
