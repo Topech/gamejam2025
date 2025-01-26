@@ -30,6 +30,7 @@ func _ready() -> void:
 
 	$BubbleGrowthProgressBar.max_value = max_growth
 
+	$BubbleBlower.max_seconds = 5 + Global.soap_level
 	BgmPlayer.play_song_dont_pop()
 
 
@@ -38,11 +39,20 @@ func _process(delta: float) -> void:
 	if is_growing:
 		growth_time_elapsed += delta
 
-		#var growth_percent = $BubbleBlower.linear_growth(growth_time_elapsed)
-		#var growth_percent = $BubbleBlower.expo_growth(growth_time_elapsed)
-		#var growth_percent = $BubbleBlower.hybrid_linear_expo_growth(growth_time_elapsed)
-		#var growth_percent = random_growth_manager.random_growth(growth_time_elapsed)
-		var growth_percent = random_hybrid_growth_fn.call(growth_time_elapsed)
+		var growth_percent: float
+		match Global.chosen_water:
+			"atomic":
+				growth_percent = random_growth_manager.random_growth(growth_time_elapsed)
+			"holy(real)":
+				growth_percent = random_hybrid_growth_fn.call(growth_time_elapsed)
+			"holy":
+				growth_percent = $BubbleBlower.hybrid_linear_expo_growth(growth_time_elapsed)
+			"mineral":
+				growth_percent = $BubbleBlower.expo_growth(growth_time_elapsed)
+			"swamp":
+				growth_percent = $BubbleBlower.linear_growth(growth_time_elapsed)
+
+			
 		
 		all_growth = growth_percent * max_growth
 		$Bubble.grow(all_growth)

@@ -4,19 +4,27 @@ extends Node
 @export var round_metrics: MetricStruct = null
 @export var soap_level: int = 1 # Initialise at level 1
 @export var unlocked_water: Array = ["swamp"] # Unlocked water array
+@export var chosen_water: String = unlocked_water[0]
 
 
 func add_money(amount: int) -> void:
 	player_money += amount
 
+
+
 func add_soap() -> void:
 	soap_level += 1
+
+
 
 func add_water(added_water: String) -> void:
 	unlocked_water.append(added_water)
 
+
+
 func reset_money() -> void:
 	player_money = 0
+
 
 
 func spend_money(amount: int) -> bool:
