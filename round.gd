@@ -61,7 +61,7 @@ func _process(delta: float) -> void:
 			"swamp_water":
 				growth_percent = $BubbleBlower.linear_growth(growth_time_elapsed)
 
-			
+		$Bubble/BubblePopSprite.play("Default", 1+growth_percent)
 		
 		all_growth = growth_percent * max_growth
 		$Bubble.grow(all_growth)
