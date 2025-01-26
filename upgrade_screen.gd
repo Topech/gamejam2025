@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 			description_text = "Warning: creates highly unstable, but exquisitely profitable bubbles."
 			upgrade_cost = 10000
 	
-	$Description.text = "Upgrade " + description_title + "
+	$RichTextLabel.text = "Upgrade " + description_title + "
 -------------------------
 Cost: $" + str(upgrade_cost) + "
 -------------------------

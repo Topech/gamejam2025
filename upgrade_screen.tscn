@@ -1,8 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://c4c5o5aqtvimi"]
+[gd_scene load_steps=23 format=3 uid="uid://c4c5o5aqtvimi"]
 
-[ext_resource type="Texture2D" uid="uid://uu116ta75q4" path="res://icon.svg" id="1_08ja4"]
-[ext_resource type="Script" path="res://upgrade_screen.gd" id="1_ypabj"]
 [ext_resource type="Shader" path="res://BalloonPixelater.gdshader" id="1_i3fsf"]
+[ext_resource type="Script" path="res://upgrade_screen.gd" id="1_ypabj"]
 [ext_resource type="Script" path="res://next_day_button.gd" id="2_8j4kv"]
 [ext_resource type="Texture2D" uid="uid://daw335udelwhh" path="res://Assets/Backgrounds/Upgrades_Screen/UpgradesShopTexture_S.png" id="2_edweg"]
 [ext_resource type="Texture2D" uid="uid://cmewhholwviym" path="res://Assets/Panels/Upgrades_Screen_Panel.png" id="3_r2jn1"]
@@ -14,8 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://q7s7wi4t234m" path="res://Assets/Buttons/UpgradesScreen/Next_Day_Button.png" id="6_3xpb3"]
 [ext_resource type="Shader" path="res://Bouncer.gdshader" id="6_17v14"]
 [ext_resource type="Texture2D" uid="uid://chn8s1fgqe13g" path="res://Assets/Buttons/UpgradesScreen/UpgradesScreenCounter.png" id="6_635tf"]
-[ext_resource type="Texture2D" uid="uid://db3d1l8f2cxbv" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple_Large.png" id="6_aropa"]
 [ext_resource type="Script" path="res://upgrade_soap_button.gd" id="6_ahvdy"]
+[ext_resource type="Texture2D" uid="uid://db3d1l8f2cxbv" path="res://Assets/Panels/Upgrades_Screen_Shelf_Purple_Large.png" id="6_aropa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t654t"]
 
@@ -115,6 +114,7 @@ texture = ExtResource("5_2bhk6")
 
 [node name="Large Shelf" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_rwsbm")
+layout_mode = 0
 offset_left = 277.0
 offset_top = 396.0
 offset_right = 467.0
