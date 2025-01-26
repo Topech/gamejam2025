@@ -2,6 +2,7 @@ extends Control
 
 
 func _ready():
+	BgmPlayer.pause_music()
 	Global.play_victory_sound()
 	var metrics = Global.round_metrics
 	var money_earned = calc_money(metrics)
@@ -22,4 +23,6 @@ func calc_money(metrics):
 
 
 func _on_next_button_pressed() -> void:
+	BgmPlayer.unpause_music()
+	BgmPlayer.play_song_wont_pop()
 	get_tree().change_scene_to_file("res://upgrade_screen.tscn")
