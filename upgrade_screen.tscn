@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4c5o5aqtvimi"]
+[gd_scene load_steps=11 format=3 uid="uid://c4c5o5aqtvimi"]
 
 [ext_resource type="Texture2D" uid="uid://uu116ta75q4" path="res://icon.svg" id="1_08ja4"]
 [ext_resource type="Script" path="res://upgrade_screen.gd" id="1_ypabj"]
 [ext_resource type="Script" path="res://next_day_button.gd" id="2_8j4kv"]
 [ext_resource type="Texture2D" uid="uid://cg3ows3ls45fp" path="res://Assets/Bubbles/bubble2.png" id="3_v1f64"]
-[ext_resource type="Texture2D" uid="uid://c7jn8oocficgl" path="res://Assets/Bubbles/bubble1.png" id="4_owdd5"]
-[ext_resource type="Texture2D" uid="uid://dvwymmwh4eoil" path="res://Assets/Bubbles/bubble3.png" id="5_nihfo"]
+[ext_resource type="Texture2D" uid="uid://ktxqpfafwfsy" path="res://Assets/Buttons/rock icon.png" id="5_055rn"]
 [ext_resource type="Script" path="res://upgrade_soap_button.gd" id="6_ahvdy"]
+[ext_resource type="Texture2D" uid="uid://c3h40em487dtb" path="res://Assets/Buttons/holy icon.png" id="6_noy44"]
+[ext_resource type="Texture2D" uid="uid://1ccath1amdiy" path="res://Assets/Buttons/atomic icon.png" id="7_m1abd"]
+[ext_resource type="Texture2D" uid="uid://ygenp22cyxt" path="res://Assets/Backgrounds/holy real icon.png" id="8_r04ny"]
+[ext_resource type="Texture2D" uid="uid://bslxhb742i1mg" path="res://Assets/Buttons/soap icon.png" id="9_x2ael"]
 
 [node name="UpgradeScreen" type="Control"]
 layout_mode = 3
@@ -39,52 +42,13 @@ Cost: $10000000
 Description:
 Lorem Ipsum"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 565.0
-offset_top = 57.0
-offset_right = 738.0
-offset_bottom = 89.0
-text = "Soap Upgrade"
-
-[node name="RichTextLabel4" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 405.0
-offset_top = 364.0
-offset_right = 520.0
-offset_bottom = 396.0
-text = "Mineral Water"
-
-[node name="RichTextLabel5" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 630.0
-offset_top = 368.0
-offset_right = 745.0
-offset_bottom = 400.0
-text = "Holy Water"
-
-[node name="RichTextLabel6" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 420.0
-offset_top = 532.0
-offset_right = 535.0
-offset_bottom = 564.0
-text = "Atomic Water"
-
-[node name="RichTextLabel7" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 607.0
-offset_top = 533.0
-offset_right = 770.0
-offset_bottom = 561.0
-text = "Holy Water (Real)"
-
 [node name="CurrentMoney" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 53.0
 offset_top = 42.0
-offset_right = 226.0
-offset_bottom = 75.0
+offset_right = 314.0
+offset_bottom = 108.0
+theme_override_font_sizes/normal_font_size = 40
 text = "Money: $100"
 
 [node name="BuyUpgrade" type="TextureButton" parent="."]
@@ -98,43 +62,119 @@ texture_normal = ExtResource("3_v1f64")
 [node name="UpgradeMineralWater" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 431.0
-offset_top = 403.0
-offset_right = 495.0
-offset_bottom = 467.0
-texture_normal = ExtResource("4_owdd5")
+offset_top = 386.0
+offset_right = 488.0
+offset_bottom = 443.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_055rn")
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="UpgradeMineralWater"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -56.5
+offset_top = -31.5
+offset_right = 56.5
+offset_bottom = 0.5
+grow_horizontal = 2
+text = "Mineral Water"
 
 [node name="UpgradeHolyWater" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 641.0
-offset_top = 403.0
-offset_right = 705.0
-offset_bottom = 467.0
-texture_normal = ExtResource("4_owdd5")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 79.0
+offset_top = 21.0
+offset_right = 136.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("6_noy44")
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="UpgradeHolyWater"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.5
+offset_top = -31.0
+offset_right = 41.5
+offset_bottom = 1.0
+grow_horizontal = 2
+text = "Holy Water"
 
 [node name="UpgradeAtomicWater" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 434.0
 offset_top = 567.0
-offset_right = 498.0
-offset_bottom = 631.0
-texture_normal = ExtResource("4_owdd5")
+offset_right = 491.0
+offset_bottom = 623.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_m1abd")
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="UpgradeAtomicWater"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -53.5
+offset_top = -31.5
+offset_right = 53.5
+offset_bottom = 0.5
+grow_horizontal = 2
+text = "Atomic Water"
 
 [node name="UpgradeHolyWaterReal" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 644.0
-offset_top = 565.0
-offset_right = 708.0
-offset_bottom = 629.0
-texture_normal = ExtResource("4_owdd5")
+offset_left = 724.0
+offset_top = 561.0
+offset_right = 781.0
+offset_bottom = 618.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_r04ny")
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="UpgradeHolyWaterReal"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -67.5
+offset_top = -27.5
+offset_right = 67.5
+offset_bottom = 0.5
+grow_horizontal = 2
+text = "Holy Water (Real)"
 
 [node name="UpgradeSoap" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 591.0
-offset_top = 98.0
-offset_right = 655.0
-offset_bottom = 162.0
-texture_normal = ExtResource("5_nihfo")
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -27.0
+offset_top = 129.0
+offset_right = 29.0
+offset_bottom = 185.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("9_x2ael")
 script = ExtResource("6_ahvdy")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UpgradeSoap"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.5
+offset_top = -29.5
+offset_right = 54.5
+offset_bottom = 0.5
+grow_horizontal = 2
+text = "Soap Upgrade"
 
 [connection signal="pressed" from="NextDayButton" to="NextDayButton" method="_on_pressed"]
 [connection signal="pressed" from="BuyUpgrade" to="." method="_on_buy_upgrade_pressed"]

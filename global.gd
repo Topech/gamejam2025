@@ -3,7 +3,7 @@ extends Node
 @export var player_money: int = 0  # Initialize with starting amount
 @export var round_metrics: MetricStruct = null
 @export var soap_level: int = 1 # Initialise at level 1
-@export var unlocked_water: Array = ["swamp"] # Unlocked water array
+@export var unlocked_water: Array = ["swamp_water"] # Unlocked water array
 @export var chosen_water: String = unlocked_water[0]
 
 
@@ -40,3 +40,6 @@ func get_money() -> int:
 	
 func get_soap() -> int:
 	return soap_level
+	
+func get_unlocked_water() -> Array:
+	return unlocked_water

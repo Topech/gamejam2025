@@ -1,17 +1,22 @@
-[gd_scene load_steps=18 format=3 uid="uid://djogu8q3gy10g"]
+[gd_scene load_steps=23 format=3 uid="uid://djogu8q3gy10g"]
 
 [ext_resource type="Script" path="res://round.gd" id="1_5trwk"]
-[ext_resource type="Texture2D" uid="uid://bk0qnhahjm6xg" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
+[ext_resource type="Texture2D" uid="uid://cnqk0mnxked4a" path="res://Assets/Backgrounds/MainMenu_6_Large.png" id="2_00ap1"]
 [ext_resource type="Script" path="res://bubble_blower.gd" id="2_luf3c"]
 [ext_resource type="Shader" path="res://scroll.gdshader" id="2_qn2gj"]
 [ext_resource type="Script" path="res://bubble.gd" id="2_r6xft"]
-[ext_resource type="Texture2D" uid="uid://bwu2w0sm67ipq" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
-[ext_resource type="Texture2D" uid="uid://caeq4djkq55pw" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
-[ext_resource type="Texture2D" uid="uid://dqw1v4g3xexkr" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
-[ext_resource type="Texture2D" uid="uid://dgmul52kmowwv" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
+[ext_resource type="Texture2D" uid="uid://c7jn8oocficgl" path="res://Assets/Bubbles/bubble1.png" id="2_yca1n"]
+[ext_resource type="Texture2D" uid="uid://cg3ows3ls45fp" path="res://Assets/Bubbles/bubble2.png" id="3_m8ehw"]
+[ext_resource type="Texture2D" uid="uid://dvwymmwh4eoil" path="res://Assets/Bubbles/bubble3.png" id="4_6wcav"]
+[ext_resource type="Texture2D" uid="uid://2rmorcxbelob" path="res://Assets/Bubbles/bubble4.png" id="5_5tfwr"]
 [ext_resource type="Script" path="res://bubble_pop_sprite.gd" id="6_52slm"]
-[ext_resource type="Texture2D" uid="uid://ds000cgaq1t53" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
-[ext_resource type="Texture2D" uid="uid://cmgjji8a7l4x4" path="res://Assets/hehehehe.png" id="11_hr2cq"]
+[ext_resource type="Texture2D" uid="uid://cqsto7tkky7lu" path="res://Assets/Buttons/Round/IntegrityBar_Large.png" id="9_162pt"]
+[ext_resource type="Texture2D" uid="uid://uv5t76webbd0" path="res://Assets/hehehehe.png" id="11_hr2cq"]
+[ext_resource type="Texture2D" uid="uid://ygenp22cyxt" path="res://Assets/Backgrounds/holy real icon.png" id="13_lf0hx"]
+[ext_resource type="Texture2D" uid="uid://1ccath1amdiy" path="res://Assets/Buttons/atomic icon.png" id="14_8uwru"]
+[ext_resource type="Texture2D" uid="uid://c3h40em487dtb" path="res://Assets/Buttons/holy icon.png" id="15_lr3id"]
+[ext_resource type="Texture2D" uid="uid://ktxqpfafwfsy" path="res://Assets/Buttons/rock icon.png" id="16_lv2c8"]
+[ext_resource type="Texture2D" uid="uid://u8xuwtliattp" path="res://Assets/Buttons/swamp icon.png" id="17_yq3qa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q3657"]
 shader = ExtResource("2_qn2gj")
@@ -131,6 +136,159 @@ script = ExtResource("6_52slm")
 [node name="BubbleBottomMarker" type="Marker2D" parent="Bubble"]
 position = Vector2(0, 30.5)
 
+[node name="HolyWaterRealButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 12.0
+offset_top = 369.0
+offset_right = 70.0
+offset_bottom = 427.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("13_lf0hx")
+
+[node name="HolyWaterRealText" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1176.0
+offset_top = 34.0
+offset_right = -943.0
+offset_bottom = 71.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.377919, 0.377919, 0.377919, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 26
+text = "Holy Water (Real)"
+
+[node name="AtomicWaterButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 12.0
+offset_top = 280.0
+offset_right = 70.0
+offset_bottom = 338.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("14_8uwru")
+
+[node name="AtomicWaterText" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1176.0
+offset_top = -55.0
+offset_right = -943.0
+offset_bottom = -18.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.377919, 0.377919, 0.377919, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 26
+text = "Atomic Water"
+
+[node name="HolyWaterText" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1176.0
+offset_top = -144.0
+offset_right = -943.0
+offset_bottom = -107.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.377919, 0.377919, 0.377919, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 26
+text = "Holy Water"
+
+[node name="HolyWaterButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 12.0
+offset_top = 191.0
+offset_right = 70.0
+offset_bottom = 249.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("15_lr3id")
+
+[node name="MineralWaterText" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1176.0
+offset_top = -233.0
+offset_right = -943.0
+offset_bottom = -196.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.377919, 0.377919, 0.377919, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 26
+text = "Mineral Water"
+
+[node name="MineralWaterButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 12.0
+offset_top = 102.0
+offset_right = 70.0
+offset_bottom = 160.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("16_lv2c8")
+
+[node name="SwampWaterText" type="RichTextLabel" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1176.0
+offset_top = -322.0
+offset_right = -943.0
+offset_bottom = -285.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.377919, 0.377919, 0.377919, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 26
+text = "Swamp Water"
+
+[node name="SwampWaterButton" type="TextureButton" parent="."]
+offset_left = 12.0
+offset_top = 13.0
+offset_right = 70.0
+offset_bottom = 71.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("17_yq3qa")
+
 [connection signal="pressed" from="BlowButton" to="." method="_on_blow_button_pressed"]
 [connection signal="pressed" from="StopButton" to="." method="_on_stop_button_pressed"]
 [connection signal="animation_finished" from="Bubble/BubblePopSprite" to="Bubble/BubblePopSprite" method="_on_animation_finished"]
+[connection signal="pressed" from="HolyWaterRealButton" to="." method="_on_holy_water_real_button_pressed"]
+[connection signal="pressed" from="AtomicWaterButton" to="." method="_on_atomic_water_button_pressed"]
+[connection signal="pressed" from="HolyWaterButton" to="." method="_on_holy_water_button_pressed"]
+[connection signal="pressed" from="MineralWaterButton" to="." method="_on_mineral_water_button_pressed"]
+[connection signal="pressed" from="SwampWaterButton" to="." method="_on_swamp_water_button_pressed"]

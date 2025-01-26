@@ -11,6 +11,7 @@ extends Node
 @onready var random_growth_manager = $BubbleBlower.get_random_grower(0.8)
 @onready var random_hybrid_growth_fn: Callable = $BubbleBlower.randomised_hybrid_grow_fn_factory()
 
+@export var water_selected = "swamp_water"
 
 signal popped
 signal stopped
@@ -32,6 +33,17 @@ func _ready() -> void:
 
 	$BubbleBlower.max_seconds = 5 + Global.soap_level
 	BgmPlayer.play_song_dont_pop()
+	
+	if Global.get_unlocked_water().has("swamp_water"):
+		$SwampWaterButton.visible = true
+	if Global.get_unlocked_water().has("mineral_water"):
+		$MineralWaterButton.visible = true
+	if Global.get_unlocked_water().has("holy_water"):
+		$HolyWaterButton.visible = true
+	if Global.get_unlocked_water().has("atomic_water"):
+		$AtomicWaterButton.visible = true
+	if Global.get_unlocked_water().has("holy_water_real"):
+		$HolyWaterRealButton.visible = true
 
 
 func _process(delta: float) -> void:
@@ -95,3 +107,39 @@ func _on_stop_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://round_scoreboard.tscn")
 
 	
+
+
+func _on_holy_water_real_button_pressed() -> void:
+	water_selected = "holy_water_real"
+	$SwampWaterButton.button_pressed = false
+	$MineralWaterButton.button_pressed = false
+	$HolyWaterButton.button_pressed = false
+	$AtomicWaterButton.button_pressed = false
+
+func _on_atomic_water_button_pressed() -> void:
+	water_selected = "atomic_water"
+	$SwampWaterButton.button_pressed = false
+	$MineralWaterButton.button_pressed = false
+	$HolyWaterButton.button_pressed = false
+	$HolyWaterRealButton.button_pressed = false
+
+func _on_holy_water_button_pressed() -> void:
+	water_selected = "holy_water"
+	$SwampWaterButton.button_pressed = false
+	$MineralWaterButton.button_pressed = false
+	$AtomicWaterButton.button_pressed = false
+	$HolyWaterRealButton.button_pressed = false
+
+func _on_mineral_water_button_pressed() -> void:
+	water_selected = "mineral_water"
+	$SwampWaterButton.button_pressed = false
+	$HolyWaterButton.button_pressed = false
+	$AtomicWaterButton.button_pressed = false
+	$HolyWaterRealButton.button_pressed = false
+
+func _on_swamp_water_button_pressed() -> void:
+	water_selected = "swamp_water"
+	$MineralWaterButton.button_pressed = false
+	$HolyWaterButton.button_pressed = false
+	$AtomicWaterButton.button_pressed = false
+	$HolyWaterRealButton.button_pressed = false
