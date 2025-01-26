@@ -13,10 +13,8 @@ func _ready() -> void:
 
 func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://round.tscn")
-	Global.play_button_sound()
 
 func _on_options_button_pressed() -> void:
-	Global.play_button_sound()
 	pass
 
 func _on_start_button_mouse_entered() -> void:
