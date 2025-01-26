@@ -10,6 +10,7 @@ var button_player: AudioStreamPlayer
 var victory_player: AudioStreamPlayer
 var pop_player: AudioStreamPlayer
 var pump_player: AudioStreamPlayer
+var buy_player: AudioStreamPlayer
 
 # for pump
 var interval_timer = 0.7
@@ -58,6 +59,9 @@ func play_pump_sound():
 		pump_player.pitch_scale = randf_range(min_pitch, max_pitch)
 		pump_player.play()
 
+func play_buy_sound():
+	buy_player.play()
+
 func start_pump():
 	is_pump_playing = true
 	play_pump_sound()
@@ -91,6 +95,10 @@ func _ready() -> void:
 	sxf_timer.wait_time = 0.5
 	sxf_timer.one_shot = false
 	sxf_timer.connect("timeout", play_pump_sound)
+	
+	buy_player = AudioStreamPlayer.new()
+	add_child(buy_player)
+	buy_player.stream = preload("res://Assets/Sounds/ggj2025bubble-BUY.ogg")
 
 func get_unlocked_water() -> Array:
 	return unlocked_water

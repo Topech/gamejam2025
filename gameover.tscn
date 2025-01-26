@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://brbhsyxskh16g"]
 
 [ext_resource type="Script" path="res://gameover.gd" id="1_o75tj"]
-[ext_resource type="Texture2D" uid="uid://dt1ek56be14lv" path="res://Assets/Bubble Over.png" id="2_63rs3"]
+[ext_resource type="Texture2D" uid="uid://b4qdale5gx3d3" path="res://Assets/Bubble Over.png" id="2_63rs3"]
 [ext_resource type="Shader" path="res://BalloonPixelater.gdshader" id="2_nu0f2"]
 [ext_resource type="Script" path="res://Scrollingdeathtext.gd" id="2_ydf8x"]
 

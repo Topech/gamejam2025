@@ -74,11 +74,14 @@ func _on_upgrade_holy_water_real_pressed() -> void:
 	selected_button = "holy_water_real"
 
 func _on_buy_upgrade_pressed() -> void:
-	Global.play_button_sound()
 	if Global.spend_money(upgrade_cost):
 		match selected_button:
 			"soap":
 				Global.add_soap()
+				Global.play_buy_sound()
 			_:
 				Global.add_water(selected_button)
+				Global.play_buy_sound()
+	else:
+		Global.play_button_sound()
 	
