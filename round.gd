@@ -17,22 +17,17 @@ signal stopped
 
 
 func _ready() -> void:	
-	$Bubble.max_growth = max_growth
+	$Bubble.max_growth = max_growth 
 
 	$StopButton.disabled = true
 	$BlowButton.visible = true
 	$StopButton.visible = false
-
-	$Bubble/BubblePopSprite.stop()
-	$Bubble/BubblePopSprite.frame = 0
-
-	$BubbleGrowthProgressBar.max_value = max_growth
-
-	$BubbleBlower.max_seconds = 5 + Global.soap_level
-	BgmPlayer.play_song_dont_pop()
-
-
-func _process(delta: float) -> void:
+	
+	$SwampWaterButton.disabled = false
+	$MineralWaterButton.disabled = false
+	$HolyWaterButton.disabled = false
+	$HolyWaterRealButton.disabled = false
+	$AtomicWaterButton.disabled = false
 	
 	if Global.get_unlocked_water().has("swamp_water"):
 		$SwampWaterButton.visible = true
@@ -44,6 +39,30 @@ func _process(delta: float) -> void:
 		$AtomicWaterButton.visible = true
 	if Global.get_unlocked_water().has("holy_water_real"):
 		$HolyWaterRealButton.visible = true
+
+	match Global.chosen_water:
+		"swamp_water":
+			$SwampWaterButton.button_pressed = true
+		"holy_water_real":
+			$HolyWaterRealButton.button_pressed = true
+		"holy_water":
+			$HolyWaterButton.button_pressed = true
+		"mineral_water":
+			$MineralWaterButton.button_pressed = true
+		"atomic_water":
+			$AtomicWaterButton.button_pressed = true
+
+	$Bubble/BubblePopSprite.stop()
+	$Bubble/BubblePopSprite.frame = 0
+
+	$BubbleGrowthProgressBar.max_value = max_growth
+
+	# randomise max sec by +- 20% 
+	$BubbleBlower.max_seconds = (5 + Global.soap_level) * (0.8 + 0.4 * randf())
+	BgmPlayer.play_song_dont_pop()
+
+
+func _process(delta: float) -> void:
 	
 	if is_growing:
 		growth_time_elapsed += delta
@@ -93,6 +112,11 @@ func _on_blow_button_pressed() -> void:
 	$BlowButton.visible = false
 	$StopButton.visible = true
 	Global.start_pump()
+	
+	$SwampWaterButton.disabled = true
+	$MineralWaterButton.disabled = true
+	$HolyWaterButton.disabled = true
+	$HolyWaterRealButton.disabled = true
 
 
 

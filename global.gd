@@ -108,3 +108,4 @@ func reset_on_gameover():
 	reset_money()
 	soap_level = 1
 	unlocked_water = ['swamp_water']
+	chosen_water = unlocked_water[0]
