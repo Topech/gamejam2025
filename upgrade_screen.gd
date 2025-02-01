@@ -15,12 +15,16 @@ func _process(delta: float) -> void:
 	
 	if Global.get_unlocked_water().has("mineral_water"):
 		$UpgradeMineralWater.disabled = true
+		$UpgradeMineralWater.visible = false
 	if Global.get_unlocked_water().has("holy_water"):
 		$UpgradeHolyWater.disabled = true
+		$UpgradeHolyWater.visible = false
 	if Global.get_unlocked_water().has("atomic_water"):
 		$UpgradeAtomicWater.disabled = true
+		$UpgradeAtomicWater.visible = false
 	if Global.get_unlocked_water().has("holy_water_real"):
 		$UpgradeHolyWaterReal.disabled = true
+		$UpgradeHolyWaterReal.visible = false
 	
 	match selected_button:
 		"soap":
