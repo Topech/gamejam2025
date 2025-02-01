@@ -13,7 +13,7 @@ func _ready():
 	var money_info = [money_earned, Global.get_money()]
 
 	if metrics != null:
-		$RichTextLabel.text = "bubble size: %s,   time taken %s" % bubble_metrics
+		$RichTextLabel.text = "bubble size: %s%%,   time taken %s sec" % bubble_metrics
 		$RichTextLabel.text += "\n\nwater type: %s,   water type multiplier: %s" % water_info
 		$RichTextLabel.text += "\n\nmoney earned $%s   total money $%s" % money_info
 
