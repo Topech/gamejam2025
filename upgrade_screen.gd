@@ -1,6 +1,7 @@
 extends Control
 var selected_button = "soap"
 var description_text = ""
+var description_effect = ""
 var description_title = "Soap"
 var upgrade_cost = 100
 
@@ -29,28 +30,36 @@ func _process(delta: float) -> void:
 	match selected_button:
 		"soap":
 			description_title = "Soap"
+			description_effect = "+1 sec to time"
 			description_text = "Makes your soap even soapier!"
 			upgrade_cost = int(float(100) * pow(1.2, Global.soap_level))
 		"mineral_water":
 			description_title = "Mineral Water"
+			description_effect = "Bubble grows increasingly faster over time!"
 			description_text = "Mineral water from the finest underground natural springs and aquifers. With surface water becoming scarce, many bubble tycoons have turned to Mineral water instead."
 			upgrade_cost = 500
 		"holy_water":
 			description_title = "Holy Water"
+			description_effect = "Bubble grows steadily then kicks up about halfway through!"
 			description_text = "Large reserves of this Holy water used to be available during The Bubble War. Recent legislation has outlawed its use for making bubbles for all but the keenest tycoons!"
 			upgrade_cost = 1000
 		"atomic_water":
 			description_title = "Atomic Water"
+			description_effect = "Bubble grows randomly!"
 			description_text = "Bad for drinking. Great for making bubbles!"
 			upgrade_cost = 2500
 		"holy_water_real":
 			description_title = "Holy Water (Real)"
+			description_effect = "Bubble grows steadily then kicks up randomly!"
 			description_text = "Warning: creates highly unstable, but exquisitely profitable bubbles."
 			upgrade_cost = 10000
 	
 	$RichTextLabel.text = "Upgrade " + description_title + "
 -------------------------
 Cost: $" + str(upgrade_cost) + "
+-------------------------
+Effect:
+" + description_effect + "
 -------------------------
 Description:
 " + description_text
